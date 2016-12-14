@@ -2,20 +2,57 @@ $(function(){
 	var photos =[
 	{fileID:1001,fileName:"图片1",fileChilds:[{childID:001-001,childName:"图片001"}]},
 	{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
+	{fileID:1001,fileName:"图片1",fileChilds:[{childID:001-001,childName:"图片001"}]},
+	{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
+	{fileID:1001,fileName:"图片1",fileChilds:[{childID:001-001,childName:"图片001"}]},
+	{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
+	{fileID:1001,fileName:"图片1",fileChilds:[{childID:001-001,childName:"图片001"}]},
+	{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
+	{fileID:1001,fileName:"图片1",fileChilds:[{childID:001-001,childName:"图片001"}]},
+	{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
+	{fileID:1001,fileName:"图片1",fileChilds:[{childID:001-001,childName:"图片001"}]},
+	{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
+	{fileID:1001,fileName:"图片1",fileChilds:[{childID:001-001,childName:"图片001"}]},
+	{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
+	{fileID:1001,fileName:"图片1",fileChilds:[{childID:001-001,childName:"图片001"}]},
+	{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
+	{fileID:1001,fileName:"图片1",fileChilds:[{childID:001-001,childName:"图片001"}]},
+	{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
+	{fileID:1001,fileName:"图片1",fileChilds:[{childID:001-001,childName:"图片001"}]},
+	{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
+	{fileID:1001,fileName:"图片1",fileChilds:[{childID:001-001,childName:"图片001"}]},
+	{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
+	{fileID:1001,fileName:"图片1",fileChilds:[{childID:001-001,childName:"图片001"}]},
+	{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
+	{fileID:1001,fileName:"图片1",fileChilds:[{childID:001-001,childName:"图片001"}]},
+	{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
+	{fileID:1001,fileName:"图片1",fileChilds:[{childID:001-001,childName:"图片001"}]},
+	{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
+	{fileID:1001,fileName:"图片1",fileChilds:[{childID:001-001,childName:"图片001"}]},
+	{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
+	{fileID:1001,fileName:"图片1",fileChilds:[{childID:001-001,childName:"图片001"}]},
+	{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
 	]
 
 	var showphotoStr ="";
 		for(var i=0;i<photos.length;i++){
-				showphotoStr +=`<div class="col-xs-4 col-md-3 col-lg-3  album">
-									<a href="#" class="thumbnail" data-id=${photos[i].fileID}>
-										<img src="../images/wjj.jpg" alt="图片加载失败">
-									</a>
-									<h4>相册:${photos[i].fileName}</h4>
-								</div>`;
+				showphotoStr +=`<div class="col-xs-6 col-md-4 col-lg-3  album" data-id="1001">
+							 									<a href="#" class="thumbnail">
+							 										<img src="../images/404.jpg" alt="图片加载失败" >
+							 										<p class="del_photo" data-child-id="1001-001">
+							 											<span> × </span>
+							 										</p>
+							 										
+							 									</a>
+							 									<h3>图片名称:${photos[i].fileName}</h3>
+							 							</div>`;
 								}
-	//$(".row").html(showStr)	
 		
-		$(".album").click(function(){
+
+$(".photo_detail").html(showphotoStr);
+
+		/*ajax 请求*/
+		/*$(".album").click(function(){
 			var id = $(this).attr("data-id");
 			$.ajax({
 				url:"",
@@ -32,7 +69,7 @@ $(function(){
 				}
 			})
 
-		})
+		})*/
 
 	
 
@@ -52,4 +89,31 @@ $(function(){
 
 	})
 
+
+/*滚动加载图片*/
+	$(".container").offset().top;
+	console.log($(".container").offset().top);
+	var photoArr=[];
+	$("#showFilesBody").scroll(function() {
+
+		var scrollHeight =parseInt($(".container").offset().top) ;
+		var scrollBottomHeight = $(".container").height();
+				console.log("scrollBottomHeight:"+scrollBottomHeight);
+		var nowHeight =scrollBottomHeight+scrollHeight;
+				console.log(nowHeight+"<<<<<<<<<<<<<<<<<");
+		if(nowHeight<900){
+				photos.push({fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
+	{fileID:1001,fileName:"图片1",fileChilds:[{childID:001-001,childName:"图片001"}]},
+	{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
+	{fileID:1001,fileName:"图片1",fileChilds:[{childID:001-001,childName:"图片001"}]},
+	{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
+	{fileID:1001,fileName:"图片1",fileChilds:[{childID:001-001,childName:"图片001"}]},
+	{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
+	{fileID:1001,fileName:"图片1",fileChilds:[{childID:001-001,childName:"图片001"}]},
+	{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]})
+  			alert("ffff")
+  		};
+	});
+
 })
+
