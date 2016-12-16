@@ -1,0 +1,220 @@
+[
+	{
+		"text": "系统管理",
+		"id": "module-2",
+		"iconCls": "null",
+		"url": "",
+		"leaf": "false",
+		"children": [
+			{
+				"text": "管理员管理",
+				"id": "module-3",
+				"iconCls": "null",
+				"url": "security/user.jsp",
+				"leaf": "true",
+				"children": []
+			}, {
+				"text": "权限组管理",
+				"id": "module-4",
+				"iconCls": "null",
+				"url": "security/role.jsp",
+				"leaf": "true",
+				"children": []
+			}, {
+				"text": "模块管理",
+				"id": "module-20",
+				"iconCls": "null",
+				"url": "module/editModule.jsp",
+				"leaf": "true",
+				"children": []
+			}, {
+				"text": "登录注销日志",
+				"id": "module-22",
+				"iconCls": "null",
+				"url": "monitor/userLogin.jsp",
+				"leaf": "true",
+				"children": []
+			}, {
+				"text": "系统日志",
+				"id": "module-11",
+				"iconCls": "null",
+				"url": "module/loginfo.jsp",
+				"leaf": "true",
+				"children": []
+			}
+		]
+	}, {
+		"text": "公众号管理",
+		"id": "module-30",
+		"iconCls": "null",
+		"url": "",
+		"leaf": "false",
+		"children": [
+			{
+				"text": "公众号信息",
+				"id": "module-31",
+				"iconCls": "null",
+				"url": "management/publicinfo.jsp",
+				"leaf": "true",
+				"children": []
+			}, {
+				"text": "菜单管理",
+				"id": "module-32",
+				"iconCls": "null",
+				"url": "management/publicmenu.jsp",
+				"leaf": "true",
+				"children": []
+			}
+		]
+	}, {
+		"text": "素材管理",
+		"id": "module-26",
+		"iconCls": "null",
+		"url": "",
+		"leaf": "false",
+		"children": [
+			{
+				"text": "文本消息创建",
+				"id": "module-27",
+				"iconCls": "null",
+				"url": "management/textmsg.jsp",
+				"leaf": "true",
+				"children": []
+			}, {
+				"text": "图文消息创建",
+				"id": "module-29",
+				"iconCls": "null",
+				"url": "management/twmsg.jsp",
+				"leaf": "true",
+				"children": []
+			}, {
+				"text": "素材消息创建",
+				"id": "module-28",
+				"iconCls": "null",
+				"url": "management/scmsg.jsp",
+				"leaf": "true",
+				"children": []
+			}
+		]
+	}, {
+		"text": "微信用户管理",
+		"id": "module-58",
+		"iconCls": "null",
+		"url": "",
+		"leaf": "false",
+		"children": [
+			{
+				"text": "关注用户",
+				"id": "module-59",
+				"iconCls": "null",
+				"url": "management/gzwxuser.jsp",
+				"leaf": "true",
+				"children": []
+			}, {
+				"text": "取消关注用户",
+				"id": "module-66",
+				"iconCls": "null",
+				"url": "management/qxwxuser.jsp",
+				"leaf": "true",
+				"children": []
+			}
+		]
+	}, {
+		"text": "消息管理",
+		"id": "module-60",
+		"iconCls": "null",
+		"url": "",
+		"leaf": "false",
+		"children": [
+			{
+				"text": "接收消息",
+				"id": "module-61",
+				"iconCls": "null",
+				"url": "management/jsmsg.jsp",
+				"leaf": "true",
+				"children": []
+			}, {
+				"text": "群发消息",
+				"id": "module-64",
+				"iconCls": "null",
+				"url": "management/massmsg.jsp",
+				"leaf": "true",
+				"children": []
+			}, {
+				"text": "消息自动回复",
+				"id": "module-53",
+				"iconCls": "null",
+				"url": "management/sendmsg.jsp",
+				"leaf": "true",
+				"children": []
+			}, {
+				"text": "分组管理",
+				"id": "module-68",
+				"iconCls": "null",
+				"url": "management/wxgroup.jsp",
+				"leaf": "true",
+				"children": []
+			}
+		]
+	}, {
+		"text": "活动发布",
+		"id": "module-83",
+		"iconCls": "null",
+		"url": "",
+		"leaf": "false",
+		"children": [
+			{
+				"text": "活动管理",
+				"id": "module-84",
+				"iconCls": "null",
+				"url": "management/activity.jsp",
+				"leaf": "true",
+				"children": []
+			}, {
+				"text": "抽奖详情",
+				"id": "module-89",
+				"iconCls": "null",
+				"url": "management/activityResult.jsp",
+				"leaf": "true",
+				"children": []
+			}
+		]
+	}, {
+		"text": "统计分析",
+		"id": "module-73",
+		"iconCls": "null",
+		"url": "",
+		"leaf": "false",
+		"children": [
+			{
+				"text": " 关注用户比例图表",
+				"id": "module-74",
+				"iconCls": "null",
+				"url": "management/weixinuseradd.jsp",
+				"leaf": "true",
+				"children": []
+			}, {
+				"text": "关注用户增长趋势图表",
+				"id": "module-75",
+				"iconCls": "null",
+				"url": "management/weixinuseradd_page.jsp",
+				"leaf": "true",
+				"children": []
+			}, {
+				"text": "取消关注用户比例表",
+				"id": "module-76",
+				"iconCls": "null",
+				"url": "management/weixinuserdel.jsp",
+				"leaf": "true",
+				"children": []
+			}, {
+				"text": "取消关注用户增长趋势图表",
+				"id": "module-77",
+				"iconCls": "null",
+				"url": "management/weixinuserdel_page.jsp",
+				"leaf": "true",
+				"children": []
+			}
+		]
+	}
+]

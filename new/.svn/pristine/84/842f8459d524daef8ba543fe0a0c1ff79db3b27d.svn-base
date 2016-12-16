@@ -1,0 +1,18 @@
+@charset 'utf-8';
+*{margin: 0;padding: 0;}
+.fix{*zoom:1; }
+ .fix:after,.fix:before{display:block;
+ content:"clear";
+ height:0;
+ clear:both; 
+ overflow:hidden; 
+ visibility:hidden;
+ }
+ ul li{
+ 	list-style: none;
+ 	/*float: left;*/
+ }
+ a{
+ 	text-decoration: none;
+ 	color: #000;
+ }

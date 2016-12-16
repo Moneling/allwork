@@ -1,0 +1,314 @@
+@charset "UTF-8";
+@imposrt url(reset.css);
+.dropdown-toggle{
+	text-decoration: none;
+}		
+.dropdown-toggle:hover{
+	background-color: #fff !important;
+}
+.wechat_menu{
+    border: 1px solid rgb(231, 231, 235);
+    border-image: none;
+    width: 318px;
+    height: 580px;
+    position: relative;
+    overflow: hidden;
+}
+.wechat_menu_title{
+    /*margin: 0px 30px;*/
+    width: auto;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    overflow: hidden;
+    padding-top: 30px;
+    font-size: 15px;
+    white-space: nowrap;
+    background:#000;
+    -ms-word-wrap: normal;
+    -ms-text-overflow: ellipsis;
+}
+.wechat_menu_list ul{
+     position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    padding-left: 43px;
+    border-top-color: rgb(231, 231, 235);
+    border-top-width: 1px;
+    border-top-style: solid;
+}
+.wechat_menu_ul li{
+	list-style: none;
+	float:left;
+	height:42px;
+	width: 91px;
+	text-align: center;
+    vertical-align: middle;
+}
+.menu_list_box{
+    height:260px;
+    width: 90px;
+}
+.wechat_menu_ul li span{
+     position:absolute;
+     bottom:0px;
+     left:0;
+     display: none;
+}
+.wechat_menu_ul li.on div{
+    border:2px solid rgb(68, 181, 73);
+    color:rgb(68, 181, 73);
+}
+.wechat_menu_ul li.on div li{
+    color:#000;
+}
+.wechat_menu_ul li.on span{
+    display: block;
+}
+.wechat_menu_ul li div{
+    height:42px;
+    width: 91px;
+    line-height: 40px;
+    border: 1px solid #ccc;
+    position: relative;
+}
+.wechat_menu_add img{
+    width:40px;
+    height:38px;
+}
+.menu_list_box ol img{
+   width:40px;
+   height:38px;
+}
+.wechat_menu_ul li ol{
+    position:absolute;
+    bottom:18px;
+    left:0;
+    width:90px;
+    height:auto;
+    text-align:
+    center;
+    z-index:10;
+    border:1px solid #ccc;
+    background: rgb(250, 250, 250);
+    border-radius: 4px;
+}
+.wechat_menu_border{
+    position:absolute;
+    bottom:11px;
+    left:50%;
+    width:0; 
+    height:0; 
+    margin-left: -5px;
+    border-left:8px solid transparent;
+    border-right:8px solid transparent;
+    border-top:8px solid #ccc;
+}
+.wechat_menu_triangle{
+    position:absolute;
+    bottom:13px;
+    left:50%;
+    width:0; 
+    height:0; 
+    margin-left: -4px;
+    border-left:6px solid transparent;
+    border-right:6px solid transparent;
+    border-top:6px solid rgb(250, 250, 250);
+    z-index:11;
+}
+
+.placeHolder{
+    width:89px !important;
+    height: 42px !important;
+    background-color:white!important;
+    border:dashed 1px gray!important;
+} 
+.menu_initial_tips{
+    text-align: center;
+    line-height: 580px;
+}
+.wechat_btn{
+    left: 0px;
+    text-align: center;
+    right: 0px;
+    bottom: -60px;
+    position: absolute;
+}
+.btn_order,.btn_finish {
+    border-width: 1px;
+    border-style: solid;
+    padding: 0px 22px;
+    border-radius: 3px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    overflow: visible;
+    font-size: 14px;
+    text-decoration: none;
+    vertical-align: middle;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+}
+.btn_order:hover,.btn_finish:hover{
+    text-decoration: none;
+    background-color: #ccc !important;
+}
+.btn_default {
+    border-color: rgb(231, 231, 235) !important;
+    color: rgb(34, 34, 34) !important;
+    background-image: linear-gradient(rgb(255, 255, 255) 0px, rgb(255, 255, 255) 100%) !important;
+    background-color: rgb(255, 255, 255) !important;
+}
+.btn_default:hover{
+     background-color: #ccc !important;
+}
+ .initial_edit_inner {   
+    padding-bottom: 20px;
+    min-height: 580px;
+    padding: 0px 20px 5px;
+    border-radius: 0px;
+    border: 1px solid rgb(231, 231, 235);
+    border-image: none;
+    box-shadow: none;
+    background-color: rgb(244, 245, 249);
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+}
+.menu_edit_hd {
+    padding: 9px 0px;
+    border-bottom:1px solid rgb(231, 231, 235);
+    /* border-bottom-style: solid; */
+}
+.edit_info {
+    float: left;
+}
+.menu_edit_hd h4 {
+    font-weight: 400;
+}
+
+.edit_extra {
+    text-align: right;
+}
+.edit_extra a {
+    color: rgb(69, 154, 233);
+    text-decoration: none;
+}
+.edit_content .frm_control_group {
+    margin-bottom: 10px;
+}
+.edit_content .frm_control_group {
+    padding-bottom: 0px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.frm_label {
+    width: 5em;
+    font-size: 14px;
+    margin-top: 0.3em;
+    margin-right: 1em;
+    float: left;
+}
+.frm_label .title {
+    font-style: normal;
+    font-weight: 400;
+}
+.frm_controls {
+    width: auto;
+    vertical-align: top;
+    float: none;
+    display: table-cell;
+}
+.frm_input_box .counter_in {
+    width: 228px;
+    padding-right: 60px;
+}
+.frm_input_box {
+    padding: 0px 10px;
+    border-radius: 0px;
+    border: 1px solid rgb(231, 231, 235);
+    border-image: none;
+    width: 278px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    vertical-align: middle;
+    display: inline-block;
+    position: relative;
+    box-shadow: none;
+    background-color: rgb(255, 255, 255);
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+}
+.frm_input_box  .frm_input {
+    margin: 4px 0px;
+    height: 22px;
+    outline: 0px;
+    border: 0px currentColor;
+    border-image: none;
+    width: 100%;
+    background-color: transparent;
+}
+.menu_content_container{
+    margin-top: 70px;
+}
+.menu_content {
+    padding: 16px 20px;
+    border: 1px solid rgb(231, 231, 235);
+    border-image: none;
+    background-color: rgb(255, 255, 255);
+}
+.menu_content_tips {
+    padding-bottom: 10px;
+}
+.tips_global {
+    color: rgb(141, 141, 141);
+}
+#urlForm .frm_control_group {
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+.btn_appmsg_wrap {
+    padding-left: 85px;
+    margin-top: -10px;
+}
+.frm_controls {
+    width: auto;
+    vertical-align: top;
+    float: none;
+    display: table-cell;
+}
+.frm_controls a:hover {
+    text-decoration: underline;
+    background: #fff;
+}
+.frm_controls a {
+    color: rgb(69, 154, 233);
+    text-decoration: none;
+}
+.tool_bar {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    padding-top: 20px;
+    margin-top: 10px;
+}
+.btn:hover, .btn-default:hover, .open .btn.dropdown-toggle, .open .btn-default.dropdown-toggle {
+    background-color: #8b9aa3!important;
+    border-color: #abbac3;
+}
+.btn:hover, .btn:focus {
+    color: #333;
+    text-decoration: none;
+}
+.btn_primary {
+    border-color: rgb(68, 181, 73);
+    /* color: rgb(255, 255, 255); */
+    background-image: linear-gradient(rgb(68, 181, 73) 0px, rgb(68, 181, 73) 100%);
+    background-color: rgb(68, 181, 73);
+}

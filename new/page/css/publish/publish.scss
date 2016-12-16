@@ -1,0 +1,28 @@
+@charset "utf-8";
+@imposrt url(reset.css);
+body {font-family: "Microsoft YaHei","iconfont"  !important;}
+*{
+	margin:0;
+	padding:0;
+}
+a{
+	text-decoration:none;
+}
+li{
+	list-style:none;
+}
+.publish_body{
+	overflow-y:initial;
+}
+.publish_bottom{
+	height:90px;
+}
+.delete_div{
+	left:50%!important;
+	top:50%!important;
+	margin-left:-120px;
+	margin-top:-75px;
+}
+#DelTbl_grid-table tbody td{
+	font-size:15px;
+}

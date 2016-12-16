@@ -1,38 +1,46 @@
 $(function(){
 	var photos =[
-	{fileID:1001,fileName:"图片1",fileChilds:[{childID:001-001,childName:"图片001"}]},
-	{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
-	{fileID:1001,fileName:"图片1",fileChilds:[{childID:001-001,childName:"图片001"}]},
-	{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
-	{fileID:1001,fileName:"图片1",fileChilds:[{childID:001-001,childName:"图片001"}]},
-	{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
-	{fileID:1001,fileName:"图片1",fileChilds:[{childID:001-001,childName:"图片001"}]},
-	{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
-	{fileID:1001,fileName:"图片1",fileChilds:[{childID:001-001,childName:"图片001"}]},
-	{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
-	{fileID:1001,fileName:"图片1",fileChilds:[{childID:001-001,childName:"图片001"}]},
-	{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
-	{fileID:1001,fileName:"图片1",fileChilds:[{childID:001-001,childName:"图片001"}]},
-	{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
-	{fileID:1001,fileName:"图片1",fileChilds:[{childID:001-001,childName:"图片001"}]},
-	{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
-	{fileID:1001,fileName:"图片1",fileChilds:[{childID:001-001,childName:"图片001"}]},
-	{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
-	{fileID:1001,fileName:"图片1",fileChilds:[{childID:001-001,childName:"图片001"}]},
-	{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
-	{fileID:1001,fileName:"图片1",fileChilds:[{childID:001-001,childName:"图片001"}]},
-	{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
-	{fileID:1001,fileName:"图片1",fileChilds:[{childID:001-001,childName:"图片001"}]},
-	{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
-	{fileID:1001,fileName:"图片1",fileChilds:[{childID:001-001,childName:"图片001"}]},
-	{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
-	{fileID:1001,fileName:"图片1",fileChilds:[{childID:001-001,childName:"图片001"}]},
-	{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
-	{fileID:1001,fileName:"图片1",fileChilds:[{childID:001-001,childName:"图片001"}]},
-	{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
-	{fileID:1001,fileName:"图片1",fileChilds:[{childID:001-001,childName:"图片001"}]},
-	{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
-	]
+						{
+						"visitName": "321321",
+						"visitManager": "",
+						"sumName": "10",
+						"sumup": "10",
+						"batchId": "UEC201407301102261",
+						"interpreter": "323232",
+						"outTime": "2016-06-25 15:11:54",
+						"jpjclist": []
+						},
+						{
+						"visitName": "53434",
+						"visitManager": "爾特",
+						"sumName": "10",
+						"sumup": "10",
+						"batchId": "UEC201612141335152",
+						"interpreter": "吻額頭",
+						"outTime": "2016-12-29 00:00:00",
+						"jpjclist": []
+						},
+						{
+						"visitName": "你爹那個",
+						"visitManager": "rete",
+						"sumName": "10",
+						"sumup": "10",
+						"batchId": "UEC201612141347103",
+						"interpreter": "大多數",
+						"outTime": "2016-12-14 00:00:00",
+						"jpjclist": []
+						},
+						{
+						"visitName": "niemn",
+						"visitManager": "但是如果",
+						"sumName": "10",
+						"sumup": "10",
+						"batchId": "UEC201612141847194",
+						"interpreter": "大刘",
+						"outTime": "2016-12-29 00:00:00",
+						"jpjclist": []
+						}
+					]
 
 	var showphotoStr ="";
 		for(var i=0;i<photos.length;i++){

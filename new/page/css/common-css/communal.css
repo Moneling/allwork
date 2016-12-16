@@ -1,0 +1,166 @@
+@charset "UTF-8";
+@imposrt url(reset.css);
+* {
+  margin: 0;
+  padding: 0; }
+
+.nav-header {
+  height: 75px; }
+
+.inner-header {
+  padding-top: 10px !important; }
+
+.inner-header small {
+  font-size: 30px;
+  font-family: "微软雅黑"; }
+
+.row_table {
+  margin-left: 80px; }
+
+.table_head {
+  font-family: "微软雅黑"; }
+
+.dataTables_wrapper label {
+  display: initial; }
+
+.admini_mask {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1049; }
+
+.delete_k {
+  position: absolute;
+  width: 175px;
+  height: 102px;
+  left: 50%;
+  margin-left: -87px;
+  top: 50%;
+  margin-top: -51px;
+  display: none;
+  z-index: 12;
+  border-radius: 15px;
+  background: #fff; }
+
+.delete_k p {
+  font-family: "微软雅黑"; }
+
+.delete_k p button {
+  border-radius: 10px; }
+
+.warn_div {
+  position: absolute;
+  top: -26px;
+  width: 200px;
+  height: 100px;
+  border-radius: 15px;
+  left: 50%;
+  margin-left: -100px;
+  z-index: 15;
+  font-family: "微软雅黑"; }
+
+.warn_div strong {
+  font-size: 20px;
+  padding-top: 10px; }
+
+.write_div {
+  position: absolute;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  z-index: 1050; }
+
+.basic_info {
+  position: relative; }
+
+.basic_info h2 {
+  font-size: 18px;
+  line-height: 35px;
+  margin: 0; }
+
+.info_name {
+  width: 48%;
+  box-sizing: border-box;
+  display: inline-block;
+  margin-top: 10px; }
+
+.info_name .col-sm-3 {
+  padding-left: 10px;
+  width: 100px; }
+
+.info_name input {
+  width: 100px; }
+
+.info_name select {
+  width: 100px;
+  font-size: 12px; }
+
+.w-100p {
+  display: block;
+  width: 98%; }
+
+.w-100p input {
+  width: 200px;
+  display: inline; }
+
+.info_static input {
+  width: initial; }
+
+#dan1 {
+  margin-left: 10px; }
+
+#widet_body {
+  height: 400px;
+  overflow-y: scroll; }
+
+.widget-box {
+  border-bottom: none; }
+
+.save_bottom {
+  text-align: center; }
+
+.ui-jqgrid .ui-jqgrid-bdiv {
+  overflow: initial; }
+
+#viewmodgrid-table {
+  width: 340px !important; }
+
+#TblGrid_grid-table {
+  background: #D9EDF7;
+  height: 312px; }
+
+#TblGrid_grid-table_2 {
+  background: #f7f7f7;
+  background-iamge: linear-gradient(to bottom, #fff 0, #eee 100%);
+  background-repeat: repeat-x; }
+
+#ViewTbl_grid-table {
+  background: #D9EDF7;
+  height: 316px; }
+
+#viewcntgrid-table {
+  height: 321px;
+  padding: 5px; }
+
+#editmodgrid-table {
+  height: 357px !important;
+  left: 50% !important;
+  margin-left: -120px !important; }
+
+#editcntgrid-table {
+  padding: 4px; }
+
+.widget-header span {
+  font-size: 14px;
+  font-family: "微软雅黑"; }
+
+#gview_grid-table > .ui-jqgrid-bdiv {
+  height: 390px !important;
+  overflow-y: scroll; }
+
+/*# sourceMappingURL=common-role.css.map */
+
+/*# sourceMappingURL=communal.css.map */

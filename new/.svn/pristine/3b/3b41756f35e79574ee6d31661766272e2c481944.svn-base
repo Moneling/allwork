@@ -1,0 +1,78 @@
+html
+<!-----------------------------增加---------------------------------->
+		<div class="col-xl-3 col-sm-5 widget-container-span ui-sortable" id="">
+			<div class="widget-header" id="widget_header">
+			  	<h5 class="smaller" style="font-family:'微软雅黑';">添加素材消息</h5>
+				<div class="widget-toolbar" id="widget-toolbar">
+					<span style="cursor:pointer;font-weight:bolder;font-size:15px;">
+	                   X
+					</span>
+				</div>
+			</div>
+			<div class="widget-box" style="margin:0;opacity: 1; z-index:0;overflow-y:scroll;">
+		      	<div class="widget-body widget-body_up" id="widet_body" style="border: none;height: auto;overflow: auto;">
+					<div class="widget-main padding-6">
+						<div class="alert alert-info" id="alert">
+							<div class="basic_info">
+								<div class="inner_basic">
+									<h2 class="smaller" style="font-family:'微软雅黑';padding-left:10px ;">基本信息</h2>
+									<div class="info_name w-100p" id="info_title">
+										<span class="col-sm-3"> 素材标题:</span>
+										<input type="text" style="width: 80%;">
+									</div> 
+									<div class="info_name w-100p" id="info_descrip">
+										<span class="col-sm-3"> 素材描述:</span>
+										<textarea style="width: 80%;"></textarea>
+									</div> 
+									<!--<div class="info_name w-50p" id="info_share">
+										<span class="col-sm-3"> 是否共享:</span>
+										<input type="radio" name="isOrNo" value="是" style="width: 20px;"><label>是</label><input type="radio" name="isOrNo" value="否" checked="checked" style="width: 20px";><label>否</label>							
+									</div> 	 -->
+								</div>
+						    </div>
+						</div>
+					</div>
+				</div>
+				<!--下面表格----------------->
+		      	<div class="widget-body widget-body_blow" style="border: none;">
+					<div class="widget-main padding-6">
+						<div class="alert alert-info" id="alert">
+							<div class="basic_info">
+								<h2 class="smaller" style="font-family:'微软雅黑';padding:0 0 20px 10px ;">关联图文消息列表</h2>
+								<table id="blowTable">
+									<tr>
+										<th><input type="checkbox" /></th>
+										<th>编号</th>
+										<th>标题</th>
+										<!--<td>是否共享</td>-->
+										<th>所属公众号</th>
+									</th>
+								</table>
+						    </div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="widget-header save_bottom" style="padding:5px 0;" id="reset_close">
+				<button class="fm-button ui-state-default ui-corner-all fm-button-icon-left btn btn-success" style="height:42px;border-radius:5px;width:62px;"><i class="icon-save"></i>保存</button>
+				<button class="fm-button ui-state-default ui-corner-all fm-button-icon-left btn btn-sm btn-primary" id="reset_btn" style="height:42px;border-radius:5px;width:62px;"><i class="icon-refresh"></i>重置</button>
+				<button class="fm-button ui-state-default ui-corner-all fm-button-icon-left btn cancel_btn" style="border-radius:5px;width:62px;padding-left:0;"><i class="icon-remove"></i>取消</button>
+			</div>
+		</div>
+
+
+css
+<style type="text/css">
+			#blowTable{
+				width: 100%;
+			}
+			#blowTable td,#blowTable th{
+				width: 25%;
+				text-align: center;
+				line-height: 30px;				
+			}
+			#blowTable th{		
+				background-color: #F1F2F4; 
+				border: 1px solid #D0D0D0;		
+			}
+		</style>

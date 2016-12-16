@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>机构树菜单树</title>
+
+		<meta name="keywords" content="Bootstrap模版,Bootstrap模版下载,Bootstrap教程,Bootstrap中文" />
+		<meta name="description" content="JS代码网提供Bootstrap模版,Bootstrap教程,Bootstrap中文翻译等相关Bootstrap插件下载" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- basic styles -->
+		<link href="../common/css/system/bootstrap.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../common/css/system/font-awesome.min.css" />
+		
+		<!--[if IE 7]>
+		  <link rel="stylesheet" href="../common/css/system/font-awesome-ie7.min.css" />
+		<![endif]-->
+
+		<!-- page specific plugin styles -->
+		<!-- <link rel="stylesheet" href="../common/css/jquery-ui-1.10.3.full.min.css" /> -->
+		<link rel="stylesheet" href="../common/css/ui.jqgrid.css" />
+		<link rel="stylesheet" type="text/css" href="css/common-css/communal.css"/>
+		<!-- fonts -->
+		<!-- ace styles -->
+		<link rel="stylesheet" href="../common/css/system/ace.min.css" />
+		<link rel="stylesheet" href="../common/css/system/ace-rtl.min.css" />
+		<link rel="stylesheet" href="../common/css/system/ace-skins.min.css" />
+		<link rel="stylesheet" href="../common/css/colorbox.css" />
+		<link rel="stylesheet" href="css/common-css/basic.css" />
+		<link rel="stylesheet" href="css/common-css/menu.css" />
+		<script src="../common/js/jquery-2.0.3.min.js"></script>
+		<script src="../common/js/system/ace-extra.min.js"></script>
+		<!--[if lte IE 8]>
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		<![endif]-->
+
+		<!-- inline styles related to this page -->
+		<link rel="stylesheet" type="text/css" href="css/contentLib/contentLib.css"/>
+		
+		<!-- ace settings handler -->
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+		<!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="navbar navbar-default" id="navbar">
+			<script type="text/javascript">
+				try{ace.settings.check('navbar' , 'fixed')}catch(e){}
+			</script>
+
+			<div class="navbar-container" id="navbar-container">
+				<div class="navbar-header pull-left">
+					<a href="#" class="navbar-brand">
+						<small>
+							<!-- <i class="icon-leaf"></i> -->
+							<img src="../common/images/logo.png" alt="">
+							<span class="logo">中国联通云服务平台</span>
+						</small>
+					</a><!-- /.brand -->
+				</div><!-- /.navbar-header -->
+				<div class="pull-right">
+					<div class="contain pull-right mt-20">
+						<img src="../common/images/clock_icon.png" alt="">
+						<span id="clock"></span>&nbsp;
+						<span>您好:</span>
+						<img src="../common/images/cion.png" alt="">
+						<span>liantong</span>
+					</div>
+					<script>
+						function time(){
+							var t=new Date();
+						    var M=t.getMonth()+1,
+						        d=t.getDate(),
+						        h=t.getHours(),
+						        m=t.getMinutes(),
+						        s=t.getSeconds();
+							    M=M<10?'0'+M:M;
+							    d=d<10?'0'+d:d;
+							    h=h<10?'0'+h:h;
+							    m=m<10?'0'+m:m;
+							    s=s<10?'0'+s:s;
+							 var time=t.getFullYear()+'-'+M+'-'+d+' '+h+':'+m+':'+s;
+							 var doc=document.getElementById('clock');
+							 doc.innerHTML=time;
+						}
+						// alert(time());
+						// doc.appendChild(time);
+						time();
+						setInterval(function(){
+				          time(),1000  
+				        })
+					</script>
+					<ul class="fix module">
+						<li class="on"><a href="">多媒体内容管理</a></li>
+						<li><a href="">用户管理</a></li>
+						<li><a href="">展厅信息管理</a></li>
+						<li><a href="">线上业务管理</a></li>
+						<li><a href="">权限管理</a></li>
+						<li><a href="">日志管理</a></li>
+						<li><a href="">系统管理</a></li>
+						<li><a href="">大数据分析</a></li>
+					</ul>
+					<script>
+						// $(document).ready(function(){
+							// $('.module').find('a').bind('click',function(){
+							
+							$('.module li').click(function(e){
+								e=event.preventDefault();
+								var index=$(this).index();
+								// alert(index);
+								function a(){
+									// alert(index+1);
+									// $('.control li').find('ul').css('display','none');
+									$('.control li').eq(index+1).find('ul').css('display','block');
+								}
+								a();
+							});
+						// });
+					</script>
+				</div>
+				
+				<script>
+					$('.module li').hover(function(){
+						$(this).addClass('on').siblings().removeClass('on');
+						$(this).find('a').css('color','white');
+					},function(){
+						$(this).find('a').css('color','#000');
+					})
+					
+				</script>
+			</div><!-- /.container -->
+		</div>
+
+		<div class="main-container" id="main-container">
+			<script type="text/javascript">
+				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+			</script>
+
+			<div class="main-container-inner">
+				<a class="menu-toggler" id="menu-toggler" href="#">
+					<span class="menu-text"></span>
+				</a>
+
+				<div class="sidebar" id="sidebar">
+					<script type="text/javascript">
+						try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
+					</script>
+
+					<div class="sidebar-shortcuts" id="sidebar-shortcuts">
+						<!-- <div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
+							<button class="btn btn-success">
+								<i class="icon-signal"></i>
+							</button>
+						
+							<button class="btn btn-info">
+								<i class="icon-pencil"></i>
+							</button>
+						
+							<button class="btn btn-warning">
+								<i class="icon-group"></i>
+							</button>
+						
+							<button class="btn btn-danger">
+								<i class="icon-cogs"></i>
+							</button>
+						</div> -->
+
+						<div class="sidebar-shortcuts-mini" id="sidebar-shortcuts-mini">
+							<span class="btn btn-success"></span>
+
+							<span class="btn btn-info"></span>
+
+							<span class="btn btn-warning"></span>
+
+							<span class="btn btn-danger"></span>
+						</div>
+					</div><!-- #sidebar-shortcuts -->
+
+					<ul class="nav nav-list control">
+						<li>
+							<a href="#">
+								<i class="icon-dashboard"></i>
+								<span class="menu-text">管理菜单</span>
+							</a>
+						</li>
+
+						<li  class="active open">
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-text-width"></i>
+								<span class="menu-text"> 多媒体内容管理 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+							<ul class="submenu">
+								<li>
+									<a href="materialLib.html">
+										<i class="icon-double-angle-right"></i>
+										多媒体素材库管理
+									</a>
+								</li>
+
+								<li class="active">
+									<a href="contentLib.html">
+										<i class="icon-double-angle-right"></i>
+										多媒体内容管理
+									</a>
+								</li>
+
+								<li>
+									<a href="review.html">
+										<i class="icon-double-angle-right"></i>
+										多媒体审核管理
+									</a>
+								</li>
+
+								<li>
+									<a href="mediaPulishing.html">
+										<i class="icon-double-angle-right"></i>
+										多媒体内容发布
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-desktop"></i>
+								<span class="menu-text"> 用户管理 </span>
+
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="#">
+										<i class="icon-double-angle-right"></i>
+										APP用户管理
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<i class="icon-double-angle-right"></i>
+										APP用户审核
+									</a>
+								</li>
+
+								<li>
+									<a href="jqgrid.html">
+										<i class="icon-double-angle-right"></i>
+										APP用户信息管理
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<i class="icon-double-angle-right"></i>
+										平台用户管理
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-list"></i>
+								<span class="menu-text"> 展厅信息管理 </span>
+
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="#">
+										<i class="icon-double-angle-right"></i>
+										展厅管理
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<i class="icon-double-angle-right"></i>
+										展厅拓扑图展示
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="icon-double-angle-right"></i>
+										展厅设备管理
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<i class="icon-double-angle-right"></i>
+										锁信息主题管理管理
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="icon-double-angle-right"></i>
+										展厅服务器管理
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-edit"></i>
+								<span class="menu-text"> 线上业务管理 </span>
+
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="form-elements.html">
+										<i class="icon-double-angle-right"></i>
+										内容收藏查看
+									</a>
+								</li>
+
+								<li>
+									<a href="form-wizard.html">
+										<i class="icon-double-angle-right"></i>
+										参展预约查看
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-list-alt"></i>
+								<span class="menu-text"> 权限管理 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+							<ul class="submenu">
+								<li>
+									<a href="elements.html">
+										<i class="icon-double-angle-right"></i>
+										用户权限组管理
+									</a>
+								</li>
+
+								<li>
+									<a href="buttons.html">
+										<i class="icon-double-angle-right"></i>
+										模块管理
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-list-alt"></i>
+								<span class="menu-text"> 日志管理 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+							<ul class="submenu">
+								<li>
+									<a href="elements.html">
+										<i class="icon-double-angle-right"></i>
+										系统日志
+									</a>
+								</li>
+
+								<li>
+									<a href="buttons.html">
+										<i class="icon-double-angle-right"></i>
+										登录注销日志
+									</a>
+								</li>
+
+								<li class="active">
+									<a href="treeview.html">
+										<i class="icon-double-angle-right"></i>
+										APP操作日志
+									</a>
+								</li>
+
+								<li>
+									<a href="jquery-ui.html">
+										<i class="icon-double-angle-right"></i>
+										内容审核日志
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-list-alt"></i>
+								<span class="menu-text"> 系统管理 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+							<ul class="submenu">
+								<li>
+									<a href="elements.html">
+										<i class="icon-double-angle-right"></i>
+										压缩参数设置
+									</a>
+								</li>
+
+								<li>
+									<a href="buttons.html">
+										<i class="icon-double-angle-right"></i>
+										数据备份
+									</a>
+								</li>
+
+								<li class="active">
+									<a href="treeview.html">
+										<i class="icon-double-angle-right"></i>
+										数据字典
+									</a>
+								</li>
+
+								<li>
+									<a href="jquery-ui.html">
+										<i class="icon-double-angle-right"></i>
+										区域信息
+									</a>
+								</li>
+								<li class="active">
+									<a href="treeview.html">
+										<i class="icon-double-angle-right"></i>
+										部门信息
+									</a>
+								</li>
+
+								<li>
+									<a href="jquery-ui.html">
+										<i class="icon-double-angle-right"></i>
+										过期发布内容清理设置
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-list-alt"></i>
+								<span class="menu-text"> 大数据分析 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+							<ul class="submenu">
+								<li>
+										<a href="#" class="dropdown-toggle">
+											<i class="icon-list-alt"></i>
+											<span class="menu-text"> 内容统计 </span>
+											<b class="arrow icon-angle-down"></b>
+										</a>
+									<ul class="submenu">
+										<li>
+											<a href="elements.html">
+												<i class="icon-double-angle-right"></i>
+												素材上传区域分布报表
+											</a>
+											
+										</li>
+										<li>
+											<a href="elements.html">
+												<i class="icon-double-angle-right"></i>
+												素材规格分析报表
+											</a>
+											
+										</li>
+										<li>
+											<a href="elements.html">
+												<i class="icon-double-angle-right"></i>
+												内容审核报表
+											</a>
+											
+										</li>
+										<li>
+											<a href="elements.html">
+												<i class="icon-double-angle-right"></i>
+												内容下载量报表
+											</a>
+											
+										</li>
+										<li>
+											<a href="elements.html">
+												<i class="icon-double-angle-right"></i>
+												内容播放次数统计报表
+											</a>
+											
+										</li>
+										<li>
+											<a href="elements.html">
+												<i class="icon-double-angle-right"></i>
+												用户注册分析报表
+											</a>
+											
+										</li>
+									</ul>
+								</li>
+								<li>
+										<a href="#" class="dropdown-toggle">
+											<i class="icon-list-alt"></i>
+											<span class="menu-text"> 微信统计 </span>
+											<b class="arrow icon-angle-down"></b>
+										</a>
+										<ul class="submenu">
+											<li>
+												<a href="elements.html">
+													<i class="icon-double-angle-right"></i>
+													客户预约展厅情况报表
+												</a>
+												
+											</li>
+										</ul>
+								</li>
+								<li>
+										<a href="#" class="dropdown-toggle">
+											<i class="icon-list-alt"></i>
+											<span class="menu-text"> APP端统计 </span>
+											<b class="arrow icon-angle-down"></b>
+										</a>
+										<ul class="submenu">
+											<li>
+												<a href="elements.html">
+													<i class="icon-double-angle-right"></i>
+													客户经理营销总览报表
+												</a>
+												
+											</li>
+										</ul>
+								</li>
+							</ul>
+						</li>
+					</ul><!-- /.nav-list -->
+
+					<div class="sidebar-collapse" id="sidebar-collapse">
+						<i class="icon-double-angle-left" data-icon1="icon-double-angle-left" data-icon2="icon-double-angle-right"></i>
+					</div>
+
+					<script type="text/javascript">
+						try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
+					</script>
+				</div>
+
+				<div class="main-content">
+					<div class="breadcrumbs" id="breadcrumbs">
+						<script type="text/javascript">
+							try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+						</script>
+
+						<ul class="breadcrumb">
+							<li>
+								<i class="icon-home home-icon"></i>
+								<a href="#">桌面</a>
+							</li>
+
+							<li>
+								<a href="#">用户管理</a>
+							</li>
+							<li class="active">APP用户信息管理</li>
+						</ul><!-- .breadcrumb -->
+
+						
+					</div>
+
+
+
+
+					<div class="page-content border ">
+
+						<div class="row ">
+							<div class="col-xs-12 ">
+								<!-- PAGE CONTENT BEGINS -->
+
+								<div class="row">
+									<div class="col-sm-12  mt-3 ">
+										<table id="grid-table">
+										</table>
+
+										<div id="grid-pager">
+											<div id="pg_grid-pager" class="ui-pager-control" role="group">
+												<table cellspacing="0" cellpadding="0" border="0" class="ui-pg-table" style="width:100%;table-layout:fixed;height:100%;" role="row">
+													<tbody>
+														<tr>
+															<td id="grid-pager_left" align="left">
+																<table cellspacing="0" cellpadding="0" border="0" class="ui-pg-table navtable" style="float:left;table-layout:auto;">
+																	<tbody>
+																		<tr>
+																			<td class="ui-pg-button ui-corner-all" title="" id="del_grid-table" data-original-title="增加权限">
+																			  <div class="ui-pg-div">
+																				 <span class="ui-icon icon-plus-sign red"></span>
+																			  </div>
+																			</td>
+																			<td class="ui-pg-button ui-corner-all" title="" id="search_grid-table" data-original-title="修改权限">
+																				<div class="ui-pg-div">
+																					<span class="ui-icon icon-pencil orange"></span>
+																				</div>
+																			</td>
+																			<td class="ui-pg-button ui-corner-all" title="" id="search_grid-table" data-original-title="提交审核" data-title="提交审核">
+																				<div class="ui-pg-div">
+																					<span class="ui-icon icon-check purpel"></span>
+																				</div>
+																			</td>
+																			<td class="ui-pg-button ui-corner-all" title="" id="refresh_grid-table" data-original-title="查看权限">
+																				<div class="ui-pg-div">
+																					<span class="ui-icon icon-zoom-in green"></span>
+																				</div>
+																			</td>
+																			<td class="ui-pg-button ui-corner-all" title="" id="refresh_grid-table" data-original-title="删除选项">
+																				<div class="ui-pg-div">
+																					<span class="ui-icon icon-trash red"></span>
+																				</div>
+																			</td>
+																		</tr>
+																	</tbody>
+																</table>
+															</td>
+															<td id="grid-pager_center" align="center">
+															</td><td id="grid-pager_right" align="right"></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+
+										<script type="text/javascript">
+											var $path_base = "/";//this will be used in gritter alerts containing images
+										</script>
+										
+										
+									</div>
+								</div>
+
+								<script type="text/javascript">
+									var $assets = "assets";//this will be used in fuelux.tree-sampledata.js
+								</script>
+								<script>
+									$('.ui-jqgrid-bdiv').css('height','600px');
+								</script>
+								<!-- PAGE CONTENT ENDS -->
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content -->
+				</div><!-- /.main-content -->
+
+				<div class="ace-settings-container" id="ace-settings-container">
+					<!-- <div class="btn btn-app btn-xs btn-warning ace-settings-btn" id="ace-settings-btn">
+						<i class="icon-cog bigger-150"></i>
+					</div> -->
+
+				
+				</div><!-- /#ace-settings-container -->
+			</div><!-- /.main-container-inner -->
+
+			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+				<i class="icon-double-angle-up icon-only bigger-110"></i>
+			</a>
+		</div><!-- /.main-container -->
+		<!--弹出框-->
+		<div class="ui-widget ui-widget-content ui-corner-all ui-jqdialog jqmID1" id="alertmod_grid-table" dir="ltr" tabindex="-1" role="dialog" aria-labelledby="alerthd_grid-table" aria-hidden="false" style="width: 200px; height: auto; z-index: 1050; overflow: hidden; top: 234px; left: 590px; display: none;">
+			<div class="ui-jqdialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix" id="alerthd_grid-table" style="cursor: move;">
+				<span class="ui-jqdialog-title" style="float: left;">操作提示</span>
+				<a href="javascript:void(0)" class="ui-jqdialog-titlebar-close ui-corner-all" id="content-prompt-close" style="right: 0.3em;">
+					<span class="ui-icon ui-icon-closethick"></span>
+				</a>
+			</div>
+			<div class="ui-jqdialog-content ui-widget-content" id="alertcnt_grid-table">
+				<div>请选择要操作的选项</div>
+				<span tabindex="0">
+					<span tabindex="-1" id="jqg_alrt"></span>
+				</span>
+			</div>
+			<div class="jqResize ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se"></div>
+		</div>
+		<div class="col-xs-12 col-sm-7 widget-container-span ui-sortable write_div" style="display:none;"  id="add_div">
+			<div class="widget-box" style="margin:0;opacity: 1; z-index: 0;">
+				<div class="widget-header widget-hea1der-small header_bg" id="widget_header">
+				  <h5 class="smaller" style="font-family:'微软雅黑';">新增内容</h5>
+					<div class="widget-toolbar" id="content-add-close">
+						<span style="cursor:pointer;font-weight:bolder;font-size:15px;">
+		                   X
+						</span>
+					</div>
+				</div>
+		      	<div class="widget-body" id="widet_body" style="height:450px;overflow-y:scroll;">
+					<div class="widget-main padding-6">
+						  <div class="alert" id="alert" style="position:relative;margin-bottom:80px;">
+							  <div class="basic_info">
+							  	<h2 style="">素材选择:</h2>
+								<div class="inner_basic">
+									<div class="info_name w-50p " id="">
+										<span class="col-sm-3"> 上传时间:</span>
+										<input class="width-65" type="text">
+									    <i class="icon-info-sign red admini_block"></i>
+									</div> 
+									<div class="info_name w-50p " id="">
+										<span class="col-sm-3"> 关键字:</span>
+										<input class="width-65" type="text">
+									    <i class="icon-info-sign red admini_block"></i>
+									</div> 
+									<div class="info_name w-50p " id="">
+										<span class="col-sm-3">行业:</span>
+										<select name="" id=""  class="width-65">
+											<option value="">请选择</option>
+											<option value="超级管理员">超级管理员</option>
+											<option value="普通管理员">普通管理员</option>
+											<option value="一般权限">一般权限</option>
+										</select>
+									    <i class="icon-info-sign red admini_block"></i>
+									</div> 
+									<div class="info_name w-100p popup_material " id=""  style="z-index:1060;">
+										<span class="col-sm-3">素材选择:</span>
+										<div class="col-sm-4">
+											<select name="from" id="multiselect" class="form-control col-sm-4" style="height:100px;width:100%;" multiple="multiple">
+												<option value="1">素材 1</option>
+												<option value="2">素材 5</option>
+												<option value="2">素材 2</option>
+												<option value="2">素材 4</option>
+												<option value="3">素材 3</option>
+											</select>
+										</div>
+
+										<div class="col-sm-1" style="padding:0 0 0 0;">
+											<button type="button" id="multiselect_rightSelected" class="btn btn-info"><i class="icon-double-angle-right bigger-150"></i></button>
+											<button type="button" id="multiselect_leftSelected" class="btn btn-warning"><i class="icon-double-angle-left bigger-150"></i></button>
+										</div>
+
+										<div class="col-sm-4">
+											<select name="to" id="multiselect_to" class="form-control col-sm-4" style="height:100px;width:100%;" size="8" multiple="multiple"></select>
+										</div>
+									</div> 
+								</div>
+							  </div>
+						 </div>
+						 <div class="alert" id="alert" style="position:relative;padding-bottom:20px;">
+							  <div class="basic_info">
+							  	<h2 style="padding-top:20px;">内容基本信息:</h2>
+								<div class="inner_basic">
+									<div class="info_name w-50p " id="">
+										<span class="col-sm-3"> 内容名称:</span>
+										<input class="width-65" type="text">
+									    <i class="icon-info-sign red admini_block"></i>
+									</div> 
+									<div class="info_name w-50p " id="">
+										<span class="col-sm-3"> 内容编号:</span>
+										<input class="width-65" type="text">
+									    <i class="icon-info-sign red admini_block"></i>
+									</div> 
+									<div class="info_name w-50p " id="">
+										<span class="col-sm-3"> 所属行业:</span>
+										<select name="" id=""  class="width-65">
+											<option value="">请选择</option>
+											<option value="超级管理员">超级管理员</option>
+											<option value="普通管理员">普通管理员</option>
+											<option value="一般权限">一般权限</option>
+										</select>
+									    <i class="icon-info-sign red admini_block"></i>
+									</div> 
+									<div class="info_name w-50p " id="">
+					                    <span class="col-sm-3"> 媒体类型:</span>
+										<select name="" id=""  class="width-65">
+											<option value="">请选择</option>
+											<option value="超级管理员">超级管理员</option>
+											<option value="普通管理员">普通管理员</option>
+											<option value="一般权限">一般权限</option>
+										</select>
+									    <i class="icon-info-sign red admini_block"></i>
+									</div> 
+									<div class="info_name w-50p " id="">
+					                    <span class="col-sm-3"> 所属展厅:</span>
+										<select name="" id=""  class="width-65">
+											<option value="">请选择</option>
+											<option value="超级管理员">超级管理员</option>
+											<option value="普通管理员">普通管理员</option>
+											<option value="一般权限">一般权限</option>
+										</select>
+									    <i class="icon-info-sign red admini_block"></i>
+									</div>
+									<div class="info_name w-50p " id="">
+					                    <span class="col-sm-3"> 所属主题:</span>
+										<select name="" id=""  class="width-65">
+											<option value="">请选择</option>
+											<option value="超级管理员">超级管理员</option>
+											<option value="普通管理员">普通管理员</option>
+											<option value="一般权限">一般权限</option>
+										</select>
+									    <i class="icon-info-sign red admini_block"></i>
+									</div>
+									<div class="info_name w-50p " id="">
+					                    <span class="col-sm-3"> 发布区域:</span>
+										<select name="" id=""  class="width-65">
+											<option value="">请选择</option>
+											<option value="超级管理员">超级管理员</option>
+											<option value="普通管理员">普通管理员</option>
+											<option value="一般权限">一般权限</option>
+										</select>
+									    <i class="icon-info-sign red admini_block"></i>
+									</div>
+									<div class="info_name w-100p " id="">
+					                    <span class="col-sm-3"> 备注:</span>
+										<textarea class="width-65" id="form-field-9" rows="4"></textarea>
+									</div>
+								</div>
+							  </div>
+						 </div>
+					</div>
+				</div>
+				 <div class="widget-header save_bottom" style="border-top:none;padding:10px 0;background:#FAFAFA;" id="reset_close">
+					<button class="fm-button ui-state-default ui-corner-all fm-button-icon-left btn btn-success" id="btn_edit" style="height:42px;width:132px;">保存并提交审核</button>
+					<button class="fm-button ui-state-default ui-corner-all fm-button-icon-left btn btn-sm btn-primary" id="reset_btn" style="height:42px;width:62px;">仅保存</button>
+					<button class="fm-button ui-state-default ui-corner-all fm-button-icon-left btn cancel_btn" style="width:62px;padding-left:9px;">取消</button>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-7 widget-container-span ui-sortable write_div" style="display:none;"  id="edit_div">
+			<div class="widget-box" style="margin:0;opacity: 1; z-index: 0;">
+				<div class="widget-header widget-hea1der-small header_bg" id="widget_header">
+				  <h5 class="smaller" style="font-family:'微软雅黑';">编辑内容</h5>
+					<div class="widget-toolbar" id="content-edit-close">
+						<span style="cursor:pointer;font-weight:bolder;font-size:15px;">
+		                   X
+						</span>
+					</div>
+				</div>
+		      	<div class="widget-body" id="widet_body" style="height:450px;overflow-y:scroll;">
+					<div class="widget-main padding-6">
+						  <div class="alert" id="alert" style="position:relative;margin-bottom:80px;">
+							  <div class="basic_info">
+							  	<h2 style="">素材选择:</h2>
+								<div class="inner_basic">
+									<div class="info_name w-50p " id="">
+										<span class="col-sm-3"> 上传时间:</span>
+										<input class="width-65" type="text">
+									    <i class="icon-info-sign red admini_block"></i>
+									</div> 
+									<div class="info_name w-50p " id="">
+										<span class="col-sm-3"> 关键字:</span>
+										<input class="width-65" type="text">
+									    <i class="icon-info-sign red admini_block"></i>
+									</div> 
+									<div class="info_name w-50p " id="">
+										<span class="col-sm-3">行业:</span>
+										<select name="" id=""  class="width-65">
+											<option value="">请选择</option>
+											<option value="超级管理员">超级管理员</option>
+											<option value="普通管理员">普通管理员</option>
+											<option value="一般权限">一般权限</option>
+										</select>
+									    <i class="icon-info-sign red admini_block"></i>
+									</div> 
+									<div class="info_name w-100p popup_material " id=""  style="z-index:1060;">
+										<span class="col-sm-3">素材选择:</span>
+										<div class="col-sm-4">
+											<select name="from" id="multiselect" class="form-control col-sm-4" style="height:100px;width:100%;" multiple="multiple">
+												<option value="1">素材 1</option>
+												<option value="2">素材 5</option>
+												<option value="2">素材 2</option>
+												<option value="2">素材 4</option>
+												<option value="3">素材 3</option>
+											</select>
+										</div>
+
+										<div class="col-sm-1" style="padding:0 0 0 0;">
+											<button type="button" id="multiselect_rightSelected" class="btn btn-info"><i class="icon-double-angle-right bigger-150"></i></button>
+											<button type="button" id="multiselect_leftSelected" class="btn btn-warning"><i class="icon-double-angle-left bigger-150"></i></button>
+										</div>
+
+										<div class="col-sm-4">
+											<select name="to" id="multiselect_to" class="form-control col-sm-4" style="height:100px;width:100%;" size="8" multiple="multiple"></select>
+										</div>
+									</div> 
+								</div>
+							  </div>
+						 </div>
+						 <div class="alert" id="alert" style="position:relative;padding-bottom:20px;">
+							  <div class="basic_info">
+							  	<h2 style="padding-top:20px;">内容基本信息:</h2>
+								<div class="inner_basic">
+									<div class="info_name w-50p " id="">
+										<span class="col-sm-3"> 内容名称:</span>
+										<input class="width-65" type="text">
+									    <i class="icon-info-sign red admini_block"></i>
+									</div> 
+									<div class="info_name w-50p " id="">
+										<span class="col-sm-3"> 内容编号:</span>
+										<input class="width-65" type="text">
+									    <i class="icon-info-sign red admini_block"></i>
+									</div> 
+									<div class="info_name w-50p " id="">
+										<span class="col-sm-3"> 所属行业:</span>
+										<select name="" id=""  class="width-65">
+											<option value="">请选择</option>
+											<option value="超级管理员">超级管理员</option>
+											<option value="普通管理员">普通管理员</option>
+											<option value="一般权限">一般权限</option>
+										</select>
+									    <i class="icon-info-sign red admini_block"></i>
+									</div> 
+									<div class="info_name w-50p " id="">
+					                    <span class="col-sm-3"> 媒体类型:</span>
+										<select name="" id=""  class="width-65">
+											<option value="">请选择</option>
+											<option value="超级管理员">超级管理员</option>
+											<option value="普通管理员">普通管理员</option>
+											<option value="一般权限">一般权限</option>
+										</select>
+									    <i class="icon-info-sign red admini_block"></i>
+									</div> 
+									<div class="info_name w-50p " id="">
+					                    <span class="col-sm-3"> 所属展厅:</span>
+										<select name="" id=""  class="width-65">
+											<option value="">请选择</option>
+											<option value="超级管理员">超级管理员</option>
+											<option value="普通管理员">普通管理员</option>
+											<option value="一般权限">一般权限</option>
+										</select>
+									    <i class="icon-info-sign red admini_block"></i>
+									</div>
+									<div class="info_name w-50p " id="">
+					                    <span class="col-sm-3"> 所属主题:</span>
+										<select name="" id=""  class="width-65">
+											<option value="">请选择</option>
+											<option value="超级管理员">超级管理员</option>
+											<option value="普通管理员">普通管理员</option>
+											<option value="一般权限">一般权限</option>
+										</select>
+									    <i class="icon-info-sign red admini_block"></i>
+									</div>
+									<div class="info_name w-50p " id="">
+					                    <span class="col-sm-3"> 发布区域:</span>
+										<select name="" id=""  class="width-65">
+											<option value="">请选择</option>
+											<option value="超级管理员">超级管理员</option>
+											<option value="普通管理员">普通管理员</option>
+											<option value="一般权限">一般权限</option>
+										</select>
+									    <i class="icon-info-sign red admini_block"></i>
+									</div>
+									<div class="info_name w-100p " id="">
+					                    <span class="col-sm-3"> 备注:</span>
+										<textarea class="width-65" id="form-field-9" rows="4"></textarea>
+									</div>
+								</div>
+							  </div>
+						 </div>
+					</div>
+				</div>
+				<div class="widget-header save_bottom" id="sure_cancel" style="border-top:none;padding:5px 0;">
+					<button class="fm-button ui-state-default ui-corner-all fm-button-icon-left btn btn-sm btn-primary" style="width:62px;height:42px;"><i class="icon-ok"></i>保存</button>
+					<button class="fm-button ui-state-default ui-corner-all fm-button-icon-left btn btn-sm cancel_btn" style="width:62px;height:42px;"><i class="icon-remove"></i>取消</button>
+				</div> 
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-7 widget-container-span ui-sortable refresh_div" style="display:none;"  id="refresh_div">
+			<div class="widget-box" style="margin:0;opacity: 1; z-index: 0;">
+				<div class="widget-header widget-hea1der-small header_bg" id="widget_header">
+				  <h5 class="smaller" style="font-family:'微软雅黑';">新增内容</h5>
+					<div class="widget-toolbar" id="content-refresh-close">
+						<span style="cursor:pointer;font-weight:bolder;font-size:15px;">
+		                   X
+						</span>
+					</div>
+				</div>
+		      	<div class="widget-body" id="widet_body" style="height:450px;overflow-y:scroll;">
+					<div class="widget-main padding-6">
+						 <div class="alert" id="alert" style="position:relative;padding-bottom:20px;">
+							  <div class="basic_info">
+							  	<h2 style="padding-top:20px;">内容基本信息:</h2>
+								<div class="inner_basic">
+									<div class="info_name w-50p " id="">
+										<span class="col-sm-3"> 内容名称:</span>
+										<input class="width-65" type="text">
+									    <i class="icon-info-sign red admini_block"></i>
+									</div> 
+									<div class="info_name w-50p " id="">
+										<span class="col-sm-3"> 内容编号:</span>
+										<input class="width-65" type="text">
+									    <i class="icon-info-sign red admini_block"></i>
+									</div> 
+									<div class="info_name w-50p " id="">
+										<span class="col-sm-3"> 所属行业:</span>
+										<select name="" id=""  class="width-65">
+											<option value="">请选择</option>
+											<option value="超级管理员">超级管理员</option>
+											<option value="普通管理员">普通管理员</option>
+											<option value="一般权限">一般权限</option>
+										</select>
+									    <i class="icon-info-sign red admini_block"></i>
+									</div> 
+									<div class="info_name w-50p " id="">
+					                    <span class="col-sm-3"> 媒体类型:</span>
+										<select name="" id=""  class="width-65">
+											<option value="">请选择</option>
+											<option value="超级管理员">超级管理员</option>
+											<option value="普通管理员">普通管理员</option>
+											<option value="一般权限">一般权限</option>
+										</select>
+									    <i class="icon-info-sign red admini_block"></i>
+									</div> 
+									<div class="info_name w-50p " id="">
+					                    <span class="col-sm-3"> 所属展厅:</span>
+										<select name="" id=""  class="width-65">
+											<option value="">请选择</option>
+											<option value="超级管理员">超级管理员</option>
+											<option value="普通管理员">普通管理员</option>
+											<option value="一般权限">一般权限</option>
+										</select>
+									    <i class="icon-info-sign red admini_block"></i>
+									</div>
+									<div class="info_name w-50p " id="">
+					                    <span class="col-sm-3"> 所属主题:</span>
+										<select name="" id=""  class="width-65">
+											<option value="">请选择</option>
+											<option value="超级管理员">超级管理员</option>
+											<option value="普通管理员">普通管理员</option>
+											<option value="一般权限">一般权限</option>
+										</select>
+									    <i class="icon-info-sign red admini_block"></i>
+									</div>
+									<div class="info_name w-50p " id="">
+					                    <span class="col-sm-3"> 发布区域:</span>
+										<select name="" id=""  class="width-65">
+											<option value="">请选择</option>
+											<option value="超级管理员">超级管理员</option>
+											<option value="普通管理员">普通管理员</option>
+											<option value="一般权限">一般权限</option>
+										</select>
+									    <i class="icon-info-sign red admini_block"></i>
+									</div>
+									<div class="info_name w-100p " id="">
+					                    <span class="col-sm-3"> 备注:</span>
+										<textarea class="width-65" id="form-field-9" rows="4"></textarea>
+									</div>
+								</div>
+							  </div>
+						 </div>
+						   <div class="alert" id="alert" style="position:relative;margin-bottom:80px;">
+							  <div class="basic_info">
+							  	<h2 style="">素材列表:</h2>
+								<div class="inner_basic">
+									<ul class="ace-thumbnails ace-videos">
+										<li>
+											<a href="videos/EP01" class="video_link">
+												<div class="fileicon" title="">
+									    			<img class="thumb" src="http://s1.pan.bdstatic.com/box-static/file-widget-1-cdn/common/Video_54_7880c8d.png" alt="tour" />
+									    			<span class="playIcon"></span>
+									    		</div>
+									    	</a>
+								    		<div class="file-name">
+								    			<a node-type="name" class="filename" href="javascript:void(0);">EP13.mp4</a>
+								    		</div>
+										</li>
+										<li>
+											<a href="videos/01" class="video_link">
+												<div class="fileicon" title="">
+									    			<img class="thumb" src="http://s1.pan.bdstatic.com/box-static/file-widget-1-cdn/common/Video_54_7880c8d.png" alt="tour" />
+									    			<span class="playIcon"></span>
+									    		</div>
+											</a>
+								    		<div class="file-name">
+								    			<a node-type="name" class="filename" href="javascript:void(0);">01.bhd</a>
+								    		</div>
+										</li>
+									</ul>
+									<ul class="ace-thumbnails ace-images">
+										<li>
+											<a href="images/gallery/51ef877248d5b96cdacadff5.jpg" data-rel="colorbox">
+												<img alt="150x150" src="images/gallery/51ef877248d5b96cdacadff5.jpg"/>
+											</a>
+											<div class="file-name">
+								    			<a node-type="name" class="filename" href="javascript:void(0);">51ef877248d5b96cdacadff5.jpg</a>
+								    		</div>
+										</li>
+
+										<li>
+											<a href="images/gallery/51f9c86c48d5b915f54d6450.jpg" data-rel="colorbox">
+												<img alt="150x150" src="images/gallery/51f9c86c48d5b915f54d6450.jpg"/>
+											</a>
+											<div class="file-name">
+								    			<a node-type="name" class="filename" href="javascript:void(0);">51ef877248d5b96cdacadff5.jpg</a>
+								    		</div>
+										</li>
+									</ul>
+								</div>
+							  </div>
+						 </div>
+					</div>
+				</div>
+				 <div class="widget-header save_bottom" style="border-top:none;padding:5px 0;" id="single_close">
+					<button class="btn cancel_btn" style="width:62px;">关闭</button>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-3 widget-container-span ui-sortable delete_div" id="delete_div">
+			<div class="widget-box">
+				<div class="widget-header widget-hea1der-small  header_bg" id="widget_header">
+				  <h5 class="smaller" style="font-family:'微软雅黑';">删除选项</h5>
+					<div class="widget-toolbar" id="content-delete-close">
+						<span style="cursor:pointer;font-weight:bolder;font-size:15px;">
+		                   X
+						</span>
+					</div>
+				</div>
+				<div class="widget-body">
+					<div class="widget-main padding-9">
+						<h5  style="font-weight:bold;color:#669fc7;"> 确认删除吗？ </h5>
+					</div>
+				</div>
+				<div class="widget-header save_bottom" id="delete_cancel" style="border-top:none;padding:5px 0;">
+					<button class="fm-button ui-state-default ui-corner-all fm-button-icon-left btn btn-sm btn-danger" style="width:62px;height:42px;">确定</button>
+					<button class="fm-button ui-state-default ui-corner-all fm-button-icon-left btn btn-sm cancel_btn" style="width:62px;height:42px;">取消</button>
+				</div> 
+			</div>
+		</div>
+		<!-- basic scripts -->
+
+		<!--[if !IE]> -->
+
+	
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<![endif]-->
+
+		<!-- basic scripts -->
+		<!--[if !IE]> -->
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='../common/js/system/jquery-2.0.3.min.js'>"+"<"+"/script>");
+		</script>
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+		<script type="text/javascript">
+		 	window.jQuery || document.write("<script src='../common/js/system/jquery-1.10.2.min.js'>"+"<"+"/script>");
+		</script>
+		<![endif]-->
+
+		<script type="text/javascript">
+			if("ontouchend" in document) document.write("<script src='../common/js/system/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+		<script src="../common/js/system/bootstrap.min.js"></script>
+		<script src="../common/js/system/typeahead-bs2.min.js"></script>
+		<script src="../common/js/multiselect.min.js"></script>
+
+		<!-- page specific plugin scripts -->
+		<script src="../common/js/jquery.colorbox-min.js"></script>
+		<script src="../common/js/date-time/bootstrap-datepicker.min.js"></script>
+		<script src="../common/js/jqGrid/jquery.jqGrid.min.js"></script>
+		<script src="../common/js/jqGrid/i18n/grid.locale-en.js"></script>
+
+		<!-- ace scripts -->
+
+		<script src="../common/js/system/ace-elements.min.js"></script>
+		<script src="../common/js/system/ace.min.js"></script>
+
+		<!-- inline scripts related to this page -->
+		<script type="text/javascript" src="js/contentLib/contentLib.js"></script>
+		<script type="text/javascript" src="js/contentLib/contentLib-js.js"></script>
+		<script>
+		/*$function(){
+			var url = window.location.href;//获取当前浏览器的url  
+		    index = url.indexOf("flag");//判断当前url是否有flag，如果有，说明是从A页面跳转而来的，就执行下面的程序  
+		      
+		    if(index !=-1) {//由A页面跳转而来  
+		        //参数准备  
+		        var start = url.indexOf("A");  
+		        var a = url.substring(start + "A".length+1);  
+		        var date = new Date();  
+		        var year = date.getFullYear();//当前年  
+		        var month = date.getMonth() + 1;//当前月（月是从0开始，所以必须加上1）  
+		        month = month<10 ? ("0"+month):month;  
+		        var queryDate = year + month;  
+		      
+		        // + "&suffix=" + encodeURI(encodeURI(suffix));  
+		        var url= "ajax的url?A=" + a +"&queryDate=" + queryDate;  
+		            //带参数执行逻辑  
+		        $.ajax({   
+		         url: url, dataType:"html",headers:{"X-Fragment":"_"},  
+		         cache:false,  
+		         success: function(html) {   
+		            //响应成功后的逻辑处理  
+		         }  
+		        });   
+		    }  
+		}*/
+		</script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$('#multiselect').multiselect();
+			});
+			jQuery(function($) {
+				var colorbox_params = {
+					reposition:true,
+					scalePhotos:true,
+					scrolling:false,
+					previous:'<i class="icon-arrow-left"></i>',
+					next:'<i class="icon-arrow-right"></i>',
+					close:'&times;',
+					current:'{current} of {total}',
+					maxWidth:'100%',
+					maxHeight:'100%',
+					onOpen:function(){
+						document.body.style.overflow = 'hidden';
+					},
+					onClosed:function(){
+						document.body.style.overflow = 'auto';
+					},
+					onComplete:function(){
+						$.colorbox.resize();
+					}
+				};
+
+				$('.ace-thumbnails [data-rel="colorbox"]').colorbox(colorbox_params);
+				$("#cboxLoadingGraphic").append("<i class='icon-spinner orange'></i>");//let's add a custom loading icon
+
+				/**$(window).on('resize.colorbox', function() {
+					try {
+						//this function has been changed in recent versions of colorbox, so it won't work
+						$.fn.colorbox.load();//to redraw the current frame
+					} catch(e){}
+				});*/
+			})
+		</script>
+	</body>
+</html>

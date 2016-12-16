@@ -1,0 +1,1419 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="utf-8" />
+		<title>中国联通后台-首页</title>		
+		<meta name="keywords" content="联通,首页,中国联通,中国联通首页" />
+		<meta name="description" content="中国联通后台首页" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		
+		<!--logo picture-->
+		<link rel="icon" href="../logo.ico" type="x-icon" />
+		<link rel="shortcut icon" href="../logo.ico" type="x-icon" />
+		
+		<!-- basic styles -->
+		<link href="../common/css/system/bootstrap.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../common/css/system/font-awesome.min.css" />
+
+		<!--[if IE 7]>
+		  <link rel="stylesheet" href="../css/system/font-awesome-ie7.min.css" />
+		<![endif]-->
+
+		<!-- page specific plugin styles -->
+        <link rel="stylesheet" href="../common/css/jquery-ui-1.10.3.full.min.css" />
+		<link rel="stylesheet" href="../common/css/datepicker.css" />
+		<link rel="stylesheet" href="../common/css/ui.jqgrid.css" />
+		<!-- fonts -->
+		<!-- ace styles -->
+		<link rel="stylesheet" href="../common/css/system/ace.min.css" />
+		<link rel="stylesheet" href="../common/css/system/ace-rtl.min.css" />
+		<link rel="stylesheet" href="../common/css/system/ace-skins.min.css" />
+		<!--树菜单-->
+	
+        <!--树菜单-->
+		<!--[if lt IE 8]>
+		  <link rel="stylesheet" href="../css/system/ace-ie.min.css" />
+		<![endif]-->
+        <link rel="stylesheet" href="css/review/review.css">
+        <link rel="stylesheet" href="css/common-css/basic.css" />
+		<link rel="stylesheet" href="css/common-css/menu.css" />
+		<!-- inline styles related to this page -->
+		<!-- ace settings handler -->
+		<script src="../common/js/jquery-2.0.3.min.js"></script>
+		<script src="../common/js/system/ace-extra.min.js"></script>
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		<script src="../js/system/html5shiv.js"></script>
+		<script src="../js/system/respond.min.js"></script>
+		<![endif]-->	
+	</head>
+
+	<body>
+		<!--header nav start-->
+		<div class="navbar navbar-default" id="navbar">
+			<script type="text/javascript">
+				try{ace.settings.check('navbar' , 'fixed')}catch(e){}
+			</script>
+
+			<div class="navbar-container" id="navbar-container">
+				<div class="navbar-header pull-left">
+					<a href="#" class="navbar-brand">
+						<small>
+							<!-- <i class="icon-leaf"></i> -->
+							<img src="../common/images/logo.png" alt="">
+							<span class="logo">中国联通云服务平台</span>
+						</small>
+					</a><!-- /.brand -->
+				</div><!-- /.navbar-header -->
+				<div class="pull-right">
+					<div class="contain pull-right mt-20">
+						<img src="../common/images/clock_icon.png" alt="">
+						<span id="clock"></span>&nbsp;
+						<span>您好:</span>
+						<img src="../common/images/cion.png" alt="">
+						<span>liantong</span>
+					</div>
+					<script>
+						function time(){
+							var t=new Date();
+						    var M=t.getMonth()+1,
+						        d=t.getDate(),
+						        h=t.getHours(),
+						        m=t.getMinutes(),
+						        s=t.getSeconds();
+							    M=M<10?'0'+M:M;
+							    d=d<10?'0'+d:d;
+							    h=h<10?'0'+h:h;
+							    m=m<10?'0'+m:m;
+							    s=s<10?'0'+s:s;
+							 var time=t.getFullYear()+'-'+M+'-'+d+' '+h+':'+m+':'+s;
+							 var doc=document.getElementById('clock');
+							 doc.innerHTML=time;
+						}
+						// alert(time());
+						// doc.appendChild(time);
+						time();
+						setInterval(function(){
+				          time(),1000  
+				        })
+					</script>
+					<ul class="fix module">
+						<li class="on"><a href="">多媒体内容管理</a></li>
+						<li><a href="">用户管理</a></li>
+						<li><a href="">展厅信息管理</a></li>
+						<li><a href="">线上业务管理</a></li>
+						<li><a href="">权限管理</a></li>
+						<li><a href="">日志管理</a></li>
+						<li><a href="">系统管理</a></li>
+						<li><a href="">大数据分析</a></li>
+					</ul>
+					<script>
+						// $(document).ready(function(){
+							// $('.module').find('a').bind('click',function(){
+							
+							$('.module li').click(function(e){
+								e=event.preventDefault();
+								var index=$(this).index();
+								// alert(index);
+								function a(){
+									// alert(index+1);
+									// $('.control li').find('ul').css('display','none');
+									$('.control li').eq(index+1).find('ul').css('display','block');
+								}
+								a();
+							});
+						// });
+					</script>
+				</div>
+				
+				<script>
+					$('.module li').hover(function(){
+						$(this).addClass('on').siblings().removeClass('on');
+						$(this).find('a').css('color','white');
+					},function(){
+						$(this).find('a').css('color','#000');
+					})
+					
+				</script>
+			</div><!-- /.container -->
+		</div>
+		<!--header nav end-->
+		
+		<!--main start-->
+		<div class="main-container" id="main-container">
+			<script type="text/javascript">
+				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+			</script>
+			
+			<!--left menu start-->
+			<div class="main-container-inner">
+				<a class="menu-toggler" id="menu-toggler" href="#">
+					<span class="menu-text"></span>
+				</a>
+				
+				<!--four icon-->
+				<div class="sidebar" id="sidebar">
+					<script type="text/javascript">
+						try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
+					</script>
+
+					<div class="sidebar-shortcuts" id="sidebar-shortcuts">
+						<!-- <div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
+							<button class="btn btn-success">
+								<i class="icon-signal"></i>
+							</button>
+
+							<button class="btn btn-info">
+								<i class="icon-pencil"></i>
+							</button>
+
+							<button class="btn btn-warning">
+								<i class="icon-group"></i>
+							</button>
+
+							<button class="btn btn-danger">
+								<i class="icon-cogs"></i>
+							</button>
+						</div> -->
+
+						<div class="sidebar-shortcuts-mini" id="sidebar-shortcuts-mini">
+							<span class="btn btn-success"></span>
+
+							<span class="btn btn-info"></span>
+
+							<span class="btn btn-warning"></span>
+
+							<span class="btn btn-danger"></span>
+						</div>
+					</div><!-- #sidebar-shortcuts -->
+					
+					<!--menu content start-->
+					<ul class="nav nav-list control">
+						<li>
+							<a href="#">
+								<i class="icon-dashboard"></i>
+								<span class="menu-text">管理菜单</span>
+							</a>
+						</li>
+
+						<li  class="active open">
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-text-width"></i>
+								<span class="menu-text"> 多媒体内容管理 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+							<ul class="submenu">
+								<li>
+									<a href="materialLib.html">
+										<i class="icon-double-angle-right"></i>
+										多媒体素材库管理
+									</a>
+								</li>
+
+								<li>
+									<a href="contentLib.html">
+										<i class="icon-double-angle-right"></i>
+										多媒体内容管理
+									</a>
+								</li>
+
+								<li class="active">
+									<a href="review.html">
+										<i class="icon-double-angle-right"></i>
+										多媒体审核管理
+									</a>
+								</li>
+
+								<li>
+									<a href="mediaPulishing.html">
+										<i class="icon-double-angle-right"></i>
+										多媒体内容发布
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-desktop"></i>
+								<span class="menu-text"> 用户管理 </span>
+
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="#">
+										<i class="icon-double-angle-right"></i>
+										APP用户管理
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<i class="icon-double-angle-right"></i>
+										APP用户审核
+									</a>
+								</li>
+
+								<li>
+									<a href="jqgrid.html">
+										<i class="icon-double-angle-right"></i>
+										APP用户信息管理
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<i class="icon-double-angle-right"></i>
+										平台用户管理
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-list"></i>
+								<span class="menu-text"> 展厅信息管理 </span>
+
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="#">
+										<i class="icon-double-angle-right"></i>
+										展厅管理
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<i class="icon-double-angle-right"></i>
+										展厅拓扑图展示
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="icon-double-angle-right"></i>
+										展厅设备管理
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<i class="icon-double-angle-right"></i>
+										锁信息主题管理管理
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="icon-double-angle-right"></i>
+										展厅服务器管理
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-edit"></i>
+								<span class="menu-text"> 线上业务管理 </span>
+
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="form-elements.html">
+										<i class="icon-double-angle-right"></i>
+										内容收藏查看
+									</a>
+								</li>
+
+								<li>
+									<a href="form-wizard.html">
+										<i class="icon-double-angle-right"></i>
+										参展预约查看
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-list-alt"></i>
+								<span class="menu-text"> 权限管理 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+							<ul class="submenu">
+								<li>
+									<a href="elements.html">
+										<i class="icon-double-angle-right"></i>
+										用户权限组管理
+									</a>
+								</li>
+
+								<li>
+									<a href="buttons.html">
+										<i class="icon-double-angle-right"></i>
+										模块管理
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-list-alt"></i>
+								<span class="menu-text"> 日志管理 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+							<ul class="submenu">
+								<li>
+									<a href="elements.html">
+										<i class="icon-double-angle-right"></i>
+										系统日志
+									</a>
+								</li>
+
+								<li>
+									<a href="buttons.html">
+										<i class="icon-double-angle-right"></i>
+										登录注销日志
+									</a>
+								</li>
+
+								<li class="active">
+									<a href="treeview.html">
+										<i class="icon-double-angle-right"></i>
+										APP操作日志
+									</a>
+								</li>
+
+								<li>
+									<a href="jquery-ui.html">
+										<i class="icon-double-angle-right"></i>
+										内容审核日志
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-list-alt"></i>
+								<span class="menu-text"> 系统管理 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+							<ul class="submenu">
+								<li>
+									<a href="elements.html">
+										<i class="icon-double-angle-right"></i>
+										压缩参数设置
+									</a>
+								</li>
+
+								<li>
+									<a href="buttons.html">
+										<i class="icon-double-angle-right"></i>
+										数据备份
+									</a>
+								</li>
+
+								<li class="active">
+									<a href="treeview.html">
+										<i class="icon-double-angle-right"></i>
+										数据字典
+									</a>
+								</li>
+
+								<li>
+									<a href="jquery-ui.html">
+										<i class="icon-double-angle-right"></i>
+										区域信息
+									</a>
+								</li>
+								<li class="active">
+									<a href="treeview.html">
+										<i class="icon-double-angle-right"></i>
+										部门信息
+									</a>
+								</li>
+
+								<li>
+									<a href="jquery-ui.html">
+										<i class="icon-double-angle-right"></i>
+										过期发布内容清理设置
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-list-alt"></i>
+								<span class="menu-text"> 大数据分析 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+							<ul class="submenu">
+								<li>
+										<a href="#" class="dropdown-toggle">
+											<i class="icon-list-alt"></i>
+											<span class="menu-text"> 内容统计 </span>
+											<b class="arrow icon-angle-down"></b>
+										</a>
+									<ul class="submenu">
+										<li>
+											<a href="elements.html">
+												<i class="icon-double-angle-right"></i>
+												素材上传区域分布报表
+											</a>
+											
+										</li>
+										<li>
+											<a href="elements.html">
+												<i class="icon-double-angle-right"></i>
+												素材规格分析报表
+											</a>
+											
+										</li>
+										<li>
+											<a href="elements.html">
+												<i class="icon-double-angle-right"></i>
+												内容审核报表
+											</a>
+											
+										</li>
+										<li>
+											<a href="elements.html">
+												<i class="icon-double-angle-right"></i>
+												内容下载量报表
+											</a>
+											
+										</li>
+										<li>
+											<a href="elements.html">
+												<i class="icon-double-angle-right"></i>
+												内容播放次数统计报表
+											</a>
+											
+										</li>
+										<li>
+											<a href="elements.html">
+												<i class="icon-double-angle-right"></i>
+												用户注册分析报表
+											</a>
+											
+										</li>
+									</ul>
+								</li>
+								<li>
+										<a href="#" class="dropdown-toggle">
+											<i class="icon-list-alt"></i>
+											<span class="menu-text"> 微信统计 </span>
+											<b class="arrow icon-angle-down"></b>
+										</a>
+										<ul class="submenu">
+											<li>
+												<a href="elements.html">
+													<i class="icon-double-angle-right"></i>
+													客户预约展厅情况报表
+												</a>
+												
+											</li>
+										</ul>
+								</li>
+								<li>
+										<a href="#" class="dropdown-toggle">
+											<i class="icon-list-alt"></i>
+											<span class="menu-text"> APP端统计 </span>
+											<b class="arrow icon-angle-down"></b>
+										</a>
+										<ul class="submenu">
+											<li>
+												<a href="elements.html">
+													<i class="icon-double-angle-right"></i>
+													客户经理营销总览报表
+												</a>
+												
+											</li>
+										</ul>
+								</li>
+							</ul>
+						</li>
+					</ul><!-- /.nav-list -->
+					<!--menu conent end-->
+					
+					<div class="sidebar-collapse" id="sidebar-collapse">
+						<i class="icon-double-angle-left" data-icon1="icon-double-angle-left" data-icon2="icon-double-angle-right"></i>
+					</div>
+
+					<script type="text/javascript">
+						try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
+					</script>
+				</div>
+				
+				<!--right nav-->
+				<div class="main-content">
+					<!--middle nav-->
+					<div class="breadcrumbs" id="breadcrumbs">
+						<script type="text/javascript">
+							try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+						</script>
+
+						<ul class="breadcrumb">
+							<li>
+								<i class="icon-home home-icon"></i>
+								<a href="#">Home</a>
+							</li>
+
+							<li>
+								<a href="#">Other Pages</a>
+							</li>
+							<li class="active">Blank Page</li>
+						</ul><!-- .breadcrumb -->
+
+						<div class="nav-search" id="nav-search">
+							<form class="form-search">
+								<span class="input-icon">
+									<input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<i class="icon-search nav-search-icon"></i>
+								</span>
+							</form>
+						</div><!-- #nav-search -->
+					</div>
+					<!--page main-->
+					<div class="page-content">
+					<!-- /.page-header -->
+<div class="row">
+	<div class="col-xs-12">
+		<!-- PAGE CONTENT BEGINS -->
+
+		<table id="grid-table"></table>
+
+			<div id="grid-pager">				
+				
+			<div id="pg_grid-pager" class="ui-pager-control" role="group">
+				<table cellspacing="0" cellpadding="0" border="0" class="ui-pg-table" style="width:100%;table-layout:fixed;height:100%;" role="row">
+				  <tbody>
+					<tr>
+						<td id="grid-pager_left" align="left">
+							<table cellspacing="0" cellpadding="0" border="0" class="ui-pg-table navtable" style="float:left;table-layout:auto;">
+								<tbody>
+									<tr>
+										<td class="ui-pg-button ui-corner-all" title="" id="refresh_grid-table" data-original-title="多媒体审核">
+											<div class="ui-pg-div">
+												<span class="ui-icon icon-eye-open"></span>
+											</div>
+										</td>
+										<td class="ui-pg-button ui-corner-all" title="" id="refresh_grid-table" data-original-title="查看">
+											<div class="ui-pg-div">
+												<span class="ui-icon icon-zoom-in green"></span>
+											</div>
+										</td>
+									
+									</tr>
+							</tbody>
+						</table>
+						</td>
+						<td id="grid-pager_center" align="center">
+						</td>
+						<td id="grid-pager_right" align="right"></td>
+					</tr>
+				</tbody>
+			</table>
+        </div>
+    </div>
+
+							
+
+								<!-- PAGE CONTENT ENDS -->
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content -->
+				</div><!-- /.main-content -->
+				<!--setting-->
+				<div class="ace-settings-container" id="ace-settings-container">
+					<div class="btn btn-app btn-xs btn-warning ace-settings-btn" id="ace-settings-btn">
+						<i class="icon-cog bigger-150"></i>
+					</div>
+
+					<div class="ace-settings-box" id="ace-settings-box">
+						<div>
+							<div class="pull-left">
+								<select id="skin-colorpicker" class="hide">
+									<option data-skin="default" value="#438EB9">#438EB9</option>
+									<option data-skin="skin-1" value="#222A2D">#222A2D</option>
+									<option data-skin="skin-2" value="#C6487E">#C6487E</option>
+									<option data-skin="skin-3" value="#D0D0D0">#D0D0D0</option>
+								</select>
+							</div>
+							<span>&nbsp; Choose Skin</span>
+						</div>
+
+						<div>
+							<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-navbar" />
+							<label class="lbl" for="ace-settings-navbar"> Fixed Navbar</label>
+						</div>
+
+						<div>
+							<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-sidebar" />
+							<label class="lbl" for="ace-settings-sidebar"> Fixed Sidebar</label>
+						</div>
+
+						<div>
+							<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-breadcrumbs" />
+							<label class="lbl" for="ace-settings-breadcrumbs"> Fixed Breadcrumbs</label>
+						</div>
+
+						<div>
+							<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-rtl" />
+							<label class="lbl" for="ace-settings-rtl"> Right To Left (rtl)</label>
+						</div>
+
+						<div>
+							<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-add-container" />
+							<label class="lbl" for="ace-settings-add-container">
+								Inside
+								<b>.container</b>
+							</label>
+						</div>
+					</div>
+				</div><!-- /#ace-settings-container -->
+			</div><!-- /.main-container-inner -->
+
+			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+				<i class="icon-double-angle-up icon-only bigger-110"></i>
+			</a>
+		</div><!-- /.main-container -->
+		<!--main end-->
+		<!--审核弹出框-->		
+		<div class="col-xs-12 col-sm-7 widget-container-span review_alert" id="review_alert">
+		  <div class="widget-box">
+			<div class="widget-header review_header" id="review_header">
+			   <h5 class="smaller" style="color:#2B7DBC;">多媒体审核</h5>
+				<div class="widget-toolbar">
+				  <span style="cursor:pointer;" id="review_close">X</span>
+				</div>
+			</div>
+				<div class="widget-body review_body">
+				   <div class="widget-main padding-6">
+					<div class="alert alert-info inner_review_body">
+					   <div class="material_review">
+						  <h4>素材审核</h4>
+						  <!--表格 -->
+						  <div class="table_body">
+							<div class="row">
+							  <div class="col-xs-12">
+								<div class="table-responsive">
+								  <table id="sample-table-1" class="table table-striped table-bordered table-hover">
+									<thead>
+									  <tr>
+										<th>文件名</th>
+										<th>文件大小</th>
+										<th class="hidden-480">素材名称</th>
+										<th>素材编号</th>
+										<th class="hidden-480">操作</th>
+									  </tr>
+									</thead>
+									<tbody>
+									  <tr>
+										
+										<td>
+											<a href="#">ace.com</a>
+										</td>
+										<td>$45</td>
+										<td class="hidden-480">3,330</td>
+										<td>Feb 12</td>
+										<td class="hidden-480">
+											<span class="label label-sm label-success">预览</span>
+										</td>
+										
+									   </tr>
+									   <tr>
+										
+			                            <td>
+										  <a href="#">base.com</a>
+										</td>
+										<td>$35</td>
+										<td class="hidden-480">2,595</td>
+										<td>Feb 18</td>
+										<td class="hidden-480">
+										<span class="label label-sm label-success">预览</span>
+										</td>
+										
+									</tr>
+			                        <tr>
+									
+			                          <td>
+										<a href="#">max.com</a>
+									  </td>
+									  <td>$60</td>
+									  <td class="hidden-480">4,400</td>
+									  <td>Mar 11</td>
+									  <td class="hidden-480">
+									   <span class="label label-sm label-success">预览</span>
+									  </td>	                         
+								</tr>
+			                    <tr>
+			                        <td>
+										 <a href="#">best.com</a>
+									</td>
+									<td>$75</td>
+									<td class="hidden-480">6,500</td>
+									<td>Apr 03</td>
+			                        <td class="hidden-480">
+									  <span class="label label-sm label-success">预览</span>
+									</td>
+							</tr>
+			                <tr>
+			                    <td>
+									<a href="#">pro.com</a>
+								</td>
+								<td>$55</td>
+							    <td class="hidden-480">4,250</td>
+								<td>Jan 21</td>
+			                    <td class="hidden-480">
+									<span class="label label-sm label-success">预览
+									</span>
+								</td>
+			                    
+								   </tr>
+								  </tbody>
+								</table>
+						  </div><!-- /.table-responsive -->
+					       </div><!-- /span -->
+						  </div>
+						</div>
+						<!--表格 -->
+						</div>
+						<div class="content_review">
+							<h4>内容审核</h4>
+							<div class="row content_body">
+								<div class="col-xs-12 col-sm-6 content_left">
+									<div class="col-sm-12 content_name">
+										<span class="col-sm-4">内容名称：</span>
+										<input class="col-sm-8" type="text" placeholder="展望">
+									</div>
+									<div class="col-sm-12 content_name">
+										<span class="col-sm-4">展厅标识：</span>
+										<input class="col-sm-8" type="text" placeholder="北京联通展厅">
+									</div>
+									<div class="col-sm-12 content_name">
+										<span class="col-sm-4">所属行业：</span>
+										<select class="col-sm-8">
+											<option value="1">请选择</option>
+											<option value="1">行业1</option>
+											<option value="1">行业2</option>
+										</select>
+									</div>
+									<div class="col-sm-12 content_name sub_review_people">
+										<span class="col-sm-4">提交审核人：</span>
+										<input class="col-sm-8" type="text" placeholder="北京联通展厅">
+									</div>
+								</div>
+								<div class="col-xs-12 col-sm-6 content_right">
+									<div class="col-sm-12 content_name">
+										<span class="col-sm-4">内容编号：</span>
+										<input class="col-sm-8" type="text" placeholder="展望">
+									</div>
+									<div class="col-sm-12 content_name">
+										<span class="col-sm-4">主题标识：</span>
+										<input class="col-sm-8" type="text" placeholder="北京联通展厅">
+									</div>
+									<div class="col-sm-12 content_name">
+										<span class="col-sm-4">发布区域：</span>
+										<select class="col-sm-8">
+											<option value="1">请选择</option>
+											<option value="1">区域1</option>
+											<option value="1">区域2</option>
+										</select>
+									</div>
+									<div class="col-sm-12 content_name sub_review_people">
+										<span class="col-sm-4">提交审核时间：</span>
+										<input class="col-sm-8" type="text" placeholder="北京联通展厅">
+									</div>
+								</div>
+							</div>
+						</div>
+					   </div>
+					  </div>
+					 </div>
+					<div class="widget-header review_bottom" id="review_bottom">
+						 <button class="btn btn-success">通过</button>
+						 <button class="btn btn-danger" style="margin:0 30px;margin-top:20px;width:82px;">不通过</button>
+						 <button class="btn btn-default" id="reviewcancel_btn">取消</button>
+						 <div class="col-sm-12 notes">
+						 	<span class="col-sm-2">批注:</span>
+						 	<input class="col-sm-9" type="text">
+						 </div>			
+					</div>
+				</div>
+		</div>			
+	
+		<!--审核弹出框-->
+		<!--查看弹出框-->
+		<div class="col-xs-12 col-sm-7 widget-container-span review_alert" id="reviewLook_alert">
+		  <div class="widget-box">
+			<div class="widget-header review_header" id="review_header">
+			   <h5 class="smaller" style="color:#2B7DBC;">多媒体审核</h5>
+				<div class="widget-toolbar">
+				  <span style="cursor:pointer;" id="reviewLook_close">X</span>
+				</div>
+			</div>
+				<div class="widget-body review_body">
+				   <div class="widget-main padding-6">
+					<div class="alert alert-info inner_review_body">
+					   <div class="material_review">
+						  <h4>素材审核</h4>
+						  <!--表格 -->
+						  <div class="table_body">
+							<div class="row">
+							  <div class="col-xs-12">
+								<div class="table-responsive">
+								  <table id="sample-table-1" class="table table-striped table-bordered table-hover">
+									<thead>
+									  <tr>
+										<th>文件名</th>
+										<th>文件大小</th>
+										<th class="hidden-480">素材名称</th>
+										<th>素材编号</th>
+										<th class="hidden-480">操作</th>
+									  </tr>
+									</thead>
+									<tbody>
+									  <tr>
+										
+										<td>
+											<a href="#">ace.com</a>
+										</td>
+										<td>$45</td>
+										<td class="hidden-480">3,330</td>
+										<td>Feb 12</td>
+										<td class="hidden-480">
+											<span class="label label-sm label-success">预览</span>
+										</td>
+										
+									   </tr>
+									   <tr>
+										
+			                            <td>
+										  <a href="#">base.com</a>
+										</td>
+										<td>$35</td>
+										<td class="hidden-480">2,595</td>
+										<td>Feb 18</td>
+										<td class="hidden-480">
+										<span class="label label-sm label-success">预览</span>
+										</td>
+										
+									</tr>
+			                        <tr>
+									
+			                          <td>
+										<a href="#">max.com</a>
+									  </td>
+									  <td>$60</td>
+									  <td class="hidden-480">4,400</td>
+									  <td>Mar 11</td>
+									  <td class="hidden-480">
+									   <span class="label label-sm label-success">预览</span>
+									  </td>	                         
+								</tr>
+			                    <tr>
+			                        <td>
+										 <a href="#">best.com</a>
+									</td>
+									<td>$75</td>
+									<td class="hidden-480">6,500</td>
+									<td>Apr 03</td>
+			                        <td class="hidden-480">
+									  <span class="label label-sm label-success">预览</span>
+									</td>
+							</tr>
+			                <tr>
+			                    <td>
+									<a href="#">pro.com</a>
+								</td>
+								<td>$55</td>
+							    <td class="hidden-480">4,250</td>
+								<td>Jan 21</td>
+			                    <td class="hidden-480">
+									<span class="label label-sm label-success">预览
+									</span>
+								</td>
+			                    
+								   </tr>
+								  </tbody>
+								</table>
+						  </div><!-- /.table-responsive -->
+					       </div><!-- /span -->
+						  </div>
+						</div>
+						<!--表格 -->
+						</div>
+						<div class="content_review">
+							<h4>内容审核</h4>
+							<div class="row content_body">
+								<div class="col-xs-12 col-sm-6 content_left">
+									<div class="col-sm-12 content_name">
+										<span class="col-sm-4">内容名称：</span>
+										<input class="col-sm-8" type="text" placeholder="展望">
+									</div>
+									<div class="col-sm-12 content_name">
+										<span class="col-sm-4">展厅标识：</span>
+										<input class="col-sm-8" type="text" placeholder="北京联通展厅">
+									</div>
+									<div class="col-sm-12 content_name">
+										<span class="col-sm-4">所属行业：</span>
+										<select class="col-sm-8">
+											<option value="1">请选择</option>
+											<option value="1">行业1</option>
+											<option value="1">行业2</option>
+										</select>
+									</div>
+									<div class="col-sm-12 content_name sub_review_people">
+										<span class="col-sm-4">提交审核人：</span>
+										<input class="col-sm-8" type="text" placeholder="北京联通展厅">
+									</div>
+								</div>
+								<div class="col-xs-12 col-sm-6 content_right">
+									<div class="col-sm-12 content_name">
+										<span class="col-sm-4">内容编号：</span>
+										<input class="col-sm-8" type="text" placeholder="展望">
+									</div>
+									<div class="col-sm-12 content_name">
+										<span class="col-sm-4">主题标识：</span>
+										<input class="col-sm-8" type="text" placeholder="北京联通展厅">
+									</div>
+									<div class="col-sm-12 content_name">
+										<span class="col-sm-4">发布区域：</span>
+										<select class="col-sm-8">
+											<option value="1">请选择</option>
+											<option value="1">区域1</option>
+											<option value="1">区域2</option>
+										</select>
+									</div>
+									<div class="col-sm-12 content_name sub_review_people">
+										<span class="col-sm-4">提交审核时间：</span>
+										<input class="col-sm-8" type="text" placeholder="北京联通展厅">
+									</div>
+								</div>
+							</div>
+						</div>
+					   </div>
+					  </div>
+					 </div>
+					<div class="widget-header review_bottom review_bottom1" id="review_bottom1">
+						 <button class="btn btn-default" id="review_look_btn">关闭</button>
+					</div>
+				</div>
+		</div>	
+		<!--查看弹出框-->
+		<!--提示框-->
+		<div class="ui-widget ui-widget-content ui-corner-all ui-jqdialog" style="width: 200px; top: 182px; left: 583px;" id="warn_div">
+			<div class="ui-jqdialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix" id="alerthd_grid-table">
+				<span class="ui-jqdialog-title">操作提示</span>
+				<a class="ui-jqdialog-titlebar-close ui-corner-all" id="warn_close_review">
+					<span class="ui-icon ui-icon-closethick"></span>
+				</a>
+			</div>
+			<div class="ui-jqdialog-content ui-widget-content" id="alertcnt_grid-table">
+				<div>请选择要操作的选项！</div>
+				<!-- <span>
+					<span id="jqg_alrt"></span>
+				</span> -->
+			</div>
+			<div class="jqResize ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se"></div>
+		</div>
+		<!--提示框-->
+		<!-- basic scripts -->
+		<!--[if !IE]> -->
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='../common/js/system/jquery-2.0.3.min.js'>"+"<"+"/script>");
+		</script>
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+		<script type="text/javascript">
+		 	window.jQuery || document.write("<script src='../js/js/jquery-1.10.2.min.js'>"+"<"+"/script>");
+		</script>
+		<![endif]-->
+		<script type="text/javascript">
+			if("ontouchend" in document) document.write("<script src='../common/js/system/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+		<script src="../common/js/system/bootstrap.min.js"></script>
+		<script src="../common/js/system/typeahead-bs2.min.js"></script>
+		
+		<!-- page specific plugin scripts -->
+
+		<!-- ace scripts -->
+		<script src="../common/js/system/ace-elements.min.js"></script>
+		<script src="../common/js/system/ace.min.js"></script>
+		<!-- inline scripts related to this page -->
+	    <script src="../common/js/date-time/bootstrap-datepicker.min.js"></script>
+	    <script src="../common/js/jqGrid/jquery.jqGrid.min.js"></script>
+		<script src="../common/js/jqGrid/i18n/grid.locale-en.js"></script>
+	    <script src="../common/js/jquery-ui-1.10.3.custom.min.js"></script>
+		<script src="../common/js/jquery.ui.touch-punch.min.js"></script>
+		<script src="../common/js/jquery.slimscroll.min.js"></script>
+		<script src="js/publish/common.js"></script>
+	    <script src="js/review/review.js"></script>
+		<!--tree-->
+		<!--<script type="text/javascript" src="../roleL/js/system/jquery-1.4.2.js"></script>-->
+	    <!--tree-->
+		<!--my scripts-->
+		<!--<script type="text/javascript" src="../js/common/common.js" ></script>-->
+		<!--my rolescripts-->
+		<!--<script type="text/javascript" src="../js/home.js" ></script>-->	 	
+	   <script type="text/javascript">
+	        jQuery(function($) {
+			
+				$('#simple-colorpicker-1').ace_colorpicker({pull_right:true}).on('change', function(){
+					var color_class = $(this).find('option:selected').data('class');
+					var new_class = 'widget-header';
+					if(color_class != 'default')  new_class += ' header-color-'+color_class;
+					$(this).closest('.widget-header').attr('class', new_class);
+				});
+			
+			
+				// scrollables
+				$('.slim-scroll').each(function () {
+					var $this = $(this);
+					$this.slimScroll({
+						height: $this.data('height') || 100,
+						railVisible:true
+					});
+				});
+			
+				/**$('.widget-box').on('ace.widget.settings' , function(e) {
+					e.preventDefault();
+				});*/
+				  
+				  
+			
+				// Portlets (boxes)
+			    $('.widget-container-span').sortable({
+			        connectWith: '.widget-container-span',
+					items:'> .widget-box',
+					opacity:0.8,
+					revert:true,
+					forceHelperSize:true,
+					placeholder: 'widget-placeholder',
+					forcePlaceholderSize:true,
+					tolerance:'pointer'
+			    });
+			
+			});
+			var grid_data = 
+			[ 
+				{id:"1",name:"Desktop Computer",note:"note",stock:"Yes",ship:"FedEx", sdate:"2007-12-03"},
+				{id:"2",name:"Laptop",note:"Long text ",stock:"Yes",ship:"InTime",sdate:"2007-12-03"},
+				{id:"3",name:"LCD Monitor",note:"note3",stock:"Yes",ship:"TNT",sdate:"2007-12-03"},
+				{id:"4",name:"Speakers",note:"note",stock:"No",ship:"ARAMEX",sdate:"2007-12-03"},
+				{id:"5",name:"Laser Printer",note:"note2",stock:"Yes",ship:"FedEx",sdate:"2007-12-03"},
+				{id:"6",name:"Play Station",note:"note3",stock:"No", ship:"FedEx",sdate:"2007-12-03"},
+				{id:"7",name:"Mobile Telephone",note:"note",stock:"Yes",ship:"ARAMEX",sdate:"2007-12-03"},
+				{id:"8",name:"Server",note:"note2",stock:"Yes",ship:"TNT",sdate:"2007-12-03"},
+				{id:"9",name:"Matrix Printer",note:"note3",stock:"No", ship:"FedEx",sdate:"2007-12-03"},
+				{id:"10",name:"Desktop Computer",note:"note",stock:"Yes",ship:"FedEx", sdate:"2007-12-03"},
+				{id:"11",name:"Laptop",note:"Long text ",stock:"Yes",ship:"InTime",sdate:"2007-12-03"},
+				{id:"12",name:"LCD Monitor",note:"note3",stock:"Yes",ship:"TNT",sdate:"2007-12-03"},
+				{id:"13",name:"Speakers",note:"note",stock:"No",ship:"ARAMEX",sdate:"2007-12-03"},
+				{id:"14",name:"Laser Printer",note:"note2",stock:"Yes",ship:"FedEx",sdate:"2007-12-03"},
+				{id:"15",name:"Play Station",note:"note3",stock:"No", ship:"FedEx",sdate:"2007-12-03"},
+				{id:"16",name:"Mobile Telephone",note:"note",stock:"Yes",ship:"ARAMEX",sdate:"2007-12-03"},
+				{id:"17",name:"Server",note:"note2",stock:"Yes",ship:"TNT",sdate:"2007-12-03"},
+				{id:"18",name:"Matrix Printer",note:"note3",stock:"No", ship:"FedEx",sdate:"2007-12-03"},
+				{id:"19",name:"Speakers",note:"note",stock:"No",ship:"ARAMEX",sdate:"2007-12-03"}
+			];	
+			
+			jQuery(function($) {
+				var grid_selector = "#grid-table";
+				var pager_selector = "#grid-pager";
+			
+				jQuery(grid_selector).jqGrid({
+					//direction: "rtl",
+					
+					data: grid_data,
+					datatype: "local",
+					height: 250,
+					colNames:[ '内容名称','内容编号','展厅标识', '主题标识', '所属行业','发布区域','提交审核人','提交审核时间'],
+					colModel:[
+						/*{name:'myac',index:'', width:80, fixed:true, sortable:false, resize:false,
+							formatter:'actions', 
+							formatoptions:{ 
+								keys:true,
+								
+								delOptions:{recreateForm: true, beforeShowForm:beforeDeleteCallback},
+								//editformbutton:true, editOptions:{recreateForm: true, beforeShowForm:beforeEditCallback}
+							}
+						},*/
+						{name:'id',index:'id', width:60},
+						{name:'sdate',index:'sdate',width:90},
+						{name:'name',index:'name', width:150},
+						{name:'stock',index:'stock', width:70},
+						{name:'ship',index:'ship', width:90},
+						{name:'note',index:'note', width:150},
+						{name:'note',index:'note', width:150},
+						{name:'note',index:'note', width:150} 
+					], 
+			
+					viewrecords : true,
+					rowNum:10,
+					rowList:[10,20,30],
+					pager : pager_selector,
+					altRows: true,
+					//toppager: true,
+					
+					multiselect: true,
+					//multikey: "ctrlKey",
+			        multiboxonly: true,
+			
+					loadComplete : function() {
+						var table = this;
+						setTimeout(function(){
+							styleCheckbox(table);
+							
+							updateActionIcons(table);
+							updatePagerIcons(table);
+							enableTooltips(table);
+						}, 0);
+					},
+			
+					//editurl: $path_base+"/dummy.html",nothing is saved
+					caption: "多媒体审核管理",
+			
+			
+					autowidth: true
+			
+				});
+			
+				//enable search/filter toolbar
+				//jQuery(grid_selector).jqGrid('filterToolbar',{defaultSearch:true,stringResult:true})
+			
+				//switch element when editing inline
+				function aceSwitch( cellvalue, options, cell ) {
+					setTimeout(function(){
+						$(cell) .find('input[type=checkbox]')
+								.wrap('<label class="inline" />')
+							.addClass('ace ace-switch ace-switch-5')
+							.after('<span class="lbl"></span>');
+					}, 0);
+				}
+				//enable datepicker
+				function pickDate( cellvalue, options, cell ) {
+					setTimeout(function(){
+						$(cell) .find('input[type=text]')
+								.datepicker({format:'yyyy-mm-dd' , autoclose:true}); 
+					}, 0);
+				}
+			
+			
+				//navButtons
+				jQuery(grid_selector).jqGrid('navGrid',pager_selector,
+					{ 	//navbar options
+						edit: false,
+						editicon : 'icon-pencil blue',
+						add: false,
+						addicon : 'icon-plus-sign purple',
+						del: false,
+						delicon : 'icon-trash red',
+						search: true,
+						searchicon : 'icon-search orange',
+						refresh: false,
+						refreshicon : 'icon-refresh green',
+						view: false,
+						viewicon : 'icon-zoom-in grey',
+					},
+					{
+						//edit record form
+						//closeAfterEdit: true,
+						recreateForm: true,
+						beforeShowForm : function(e) {
+							var form = $(e[0]);
+							form.closest('.ui-jqdialog').find('.ui-jqdialog-titlebar').wrapInner('<div class="widget-header" />')
+							style_edit_form(form);
+						}
+					},
+					{
+						//new record form
+						closeAfterAdd: true,
+						recreateForm: true,
+						viewPagerButtons: false,
+						beforeShowForm : function(e) {
+							var form = $(e[0]);
+							form.closest('.ui-jqdialog').find('.ui-jqdialog-titlebar').wrapInner('<div class="widget-header" />')
+							style_edit_form(form);
+						}
+					},
+					{
+						//delete record form
+						recreateForm: true,
+						beforeShowForm : function(e) {
+							var form = $(e[0]);
+							if(form.data('styled')) return false;
+							
+							form.closest('.ui-jqdialog').find('.ui-jqdialog-titlebar').wrapInner('<div class="widget-header" />')
+							style_delete_form(form);
+							
+							form.data('styled', true);
+						},
+						onClick : function(e) {
+							alert(1);
+						}
+					},
+					{
+						//search form
+						recreateForm: true,
+						afterShowSearch: function(e){
+							var form = $(e[0]);
+							form.closest('.ui-jqdialog').find('.ui-jqdialog-title').wrap('<div class="widget-header" />')
+							style_search_form(form);
+						},
+						afterRedraw: function(){
+							style_search_filters($(this));
+						}
+						,
+						multipleSearch: true,
+						/**
+						multipleGroup:true,
+						showQuery: true
+						*/
+					},
+					{
+						//view record form
+						recreateForm: true,
+						beforeShowForm: function(e){
+							var form = $(e[0]);
+							form.closest('.ui-jqdialog').find('.ui-jqdialog-title').wrap('<div class="widget-header" />')
+						}
+					}
+				)
+			
+			
+				
+				function style_edit_form(form) {
+					//enable datepicker on "sdate" field and switches for "stock" field
+					form.find('input[name=sdate]').datepicker({format:'yyyy-mm-dd' , autoclose:true})
+						.end().find('input[name=stock]')
+							  .addClass('ace ace-switch ace-switch-5').wrap('<label class="inline" />').after('<span class="lbl"></span>');
+			
+					//update buttons classes
+					var buttons = form.next().find('.EditButton .fm-button');
+					buttons.addClass('btn btn-sm').find('[class*="-icon"]').remove();//ui-icon, s-icon
+					buttons.eq(0).addClass('btn-primary').prepend('<i class="icon-ok"></i>');
+					buttons.eq(1).prepend('<i class="icon-remove"></i>')
+					
+					buttons = form.next().find('.navButton a');
+					buttons.find('.ui-icon').remove();
+					buttons.eq(0).append('<i class="icon-chevron-left"></i>');
+					buttons.eq(1).append('<i class="icon-chevron-right"></i>');		
+				}
+			
+				function style_delete_form(form) {
+					var buttons = form.next().find('.EditButton .fm-button');
+					buttons.addClass('btn btn-sm').find('[class*="-icon"]').remove();//ui-icon, s-icon
+					buttons.eq(0).addClass('btn-danger').prepend('<i class="icon-trash"></i>');
+					buttons.eq(1).prepend('<i class="icon-remove"></i>')
+				}
+				
+				function style_search_filters(form) {
+					form.find('.delete-rule').val('X');
+					form.find('.add-rule').addClass('btn btn-xs btn-primary');
+					form.find('.add-group').addClass('btn btn-xs btn-success');
+					form.find('.delete-group').addClass('btn btn-xs btn-danger');
+				}
+				function style_search_form(form) {
+					var dialog = form.closest('.ui-jqdialog');
+					var buttons = dialog.find('.EditTable')
+					buttons.find('.EditButton a[id*="_reset"]').addClass('btn btn-sm btn-info').find('.ui-icon').attr('class', 'icon-retweet');
+					buttons.find('.EditButton a[id*="_query"]').addClass('btn btn-sm btn-inverse').find('.ui-icon').attr('class', 'icon-comment-alt');
+					buttons.find('.EditButton a[id*="_search"]').addClass('btn btn-sm btn-purple').find('.ui-icon').attr('class', 'icon-search');
+				}
+				
+				function beforeDeleteCallback(e) {
+					var form = $(e[0]);
+					if(form.data('styled')) return false;
+					
+					form.closest('.ui-jqdialog').find('.ui-jqdialog-titlebar').wrapInner('<div class="widget-header" />')
+					style_delete_form(form);
+					
+					form.data('styled', true);
+				}
+				
+				function beforeEditCallback(e) {
+					var form = $(e[0]);
+					form.closest('.ui-jqdialog').find('.ui-jqdialog-titlebar').wrapInner('<div class="widget-header" />')
+					style_edit_form(form);
+				}
+			
+			
+			
+				//it causes some flicker when reloading or navigating grid
+				//it may be possible to have some custom formatter to do this as the grid is being created to prevent this
+				//or go back to default browser checkbox styles for the grid
+				function styleCheckbox(table) {
+				/**
+					$(table).find('input:checkbox').addClass('ace')
+					.wrap('<label />')
+					.after('<span class="lbl align-top" />')
+			
+			
+					$('.ui-jqgrid-labels th[id*="_cb"]:first-child')
+					.find('input.cbox[type=checkbox]').addClass('ace')
+					.wrap('<label />').after('<span class="lbl align-top" />');
+				*/
+				}
+				
+			
+				//unlike navButtons icons, action icons in rows seem to be hard-coded
+				//you can change them like this in here if you want
+				function updateActionIcons(table) {
+					/**
+					var replacement = 
+					{
+						'ui-icon-pencil' : 'icon-pencil blue',
+						'ui-icon-trash' : 'icon-trash red',
+						'ui-icon-disk' : 'icon-ok green',
+						'ui-icon-cancel' : 'icon-remove red'
+					};
+					$(table).find('.ui-pg-div span.ui-icon').each(function(){
+						var icon = $(this);
+						var $class = $.trim(icon.attr('class').replace('ui-icon', ''));
+						if($class in replacement) icon.attr('class', 'ui-icon '+replacement[$class]);
+					})
+					*/
+				}
+				
+				//replace icons with FontAwesome icons like above
+				function updatePagerIcons(table) {
+					var replacement = 
+					{
+						'ui-icon-seek-first' : 'icon-double-angle-left bigger-140',
+						'ui-icon-seek-prev' : 'icon-angle-left bigger-140',
+						'ui-icon-seek-next' : 'icon-angle-right bigger-140',
+						'ui-icon-seek-end' : 'icon-double-angle-right bigger-140'
+					};
+					$('.ui-pg-table:not(.navtable) > tbody > tr > .ui-pg-button > .ui-icon').each(function(){
+						var icon = $(this);
+						var $class = $.trim(icon.attr('class').replace('ui-icon', ''));
+						
+						if($class in replacement) icon.attr('class', 'ui-icon '+replacement[$class]);
+					})
+				}
+			
+				function enableTooltips(table) {
+					$('.navtable .ui-pg-button').tooltip({container:'body'});
+					$(table).find('.ui-pg-div').tooltip({container:'body'});
+				}
+			
+				//var selr = jQuery(grid_selector).jqGrid('getGridParam','selrow');
+			
+			
+			});
+		</script>
+</body>
+</html>

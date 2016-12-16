@@ -1,0 +1,83 @@
+
+$mg:auto;
+$tc:center;
+$tl:left;
+$tr:right;
+$bsize:border-box;
+$bg:#F9F9F9;
+$bg1:#fff;
+$ml:20px;
+$pl:20px;
+$bcolor:#f3f3f3;
+$bsty:solid;
+body,html,ol,li,div{
+		margin: 0px;
+		padding: 0px;
+
+}
+body,html{
+	width: 100%;
+	height: 100%;
+	background: $bg;
+}
+
+
+#material-report{
+	width: 900px;
+	height: 600px;
+	margin:$mg;
+	text-align:$tl;
+	box-sizing:$bsize;
+	background: $bg1;
+	border:1px $bsty $bcolor;
+	margin-top: 20px;	
+	>.material-report-nav{
+		width:100%;
+		height: 60px;
+		background: $bg1;
+		border-bottom:1px $bsty $bcolor;
+		box-sizing:$bsize;
+		line-height: 60px;
+		
+		>.nav-site{
+			box-sizing:$bsize;
+			width: 400px;
+			height: 60px;
+			float: left;
+			>.breadcrumb{
+				padding: 0px 20px;
+				background-color: #fff;
+				font-size: 16px;
+			}
+		}
+		>.nav-serach{
+			float: left;
+			width: 498px;
+			box-sizing:$bsize;
+			text-align:right;
+			>.input-group{
+				width: 100%;
+				padding-right: 20px;
+				>input{
+					width: 260px;
+					height: 30px;
+				}
+				>.input-group-addon{
+					height: 30px;
+					padding:0px 12px;
+				}
+			}
+		}
+
+	}
+	>.material-report-main{
+		width: 100%;
+		height:540px;
+		background:gray;
+		box-sizing:$bsize;
+	}
+
+}
+
+
+

@@ -1,0 +1,55 @@
+body, html, ol, li, div {
+  margin: 0px;
+  padding: 0px; }
+
+body, html {
+  width: 100%;
+  height: 100%;
+  background: #F9F9F9; }
+
+#material-report {
+  width: 900px;
+  height: 600px;
+  margin: auto;
+  text-align: left;
+  box-sizing: border-box;
+  background: #fff;
+  border: 1px solid #f3f3f3;
+  margin-top: 20px; }
+  #material-report > .material-report-nav {
+    width: 100%;
+    height: 60px;
+    background: #fff;
+    border-bottom: 1px solid #f3f3f3;
+    box-sizing: border-box;
+    line-height: 60px; }
+    #material-report > .material-report-nav > .nav-site {
+      box-sizing: border-box;
+      width: 400px;
+      height: 60px;
+      float: left; }
+      #material-report > .material-report-nav > .nav-site > .breadcrumb {
+        padding: 0px 20px;
+        background-color: #fff;
+        font-size: 16px; }
+    #material-report > .material-report-nav > .nav-serach {
+      float: left;
+      width: 498px;
+      box-sizing: border-box;
+      text-align: right; }
+      #material-report > .material-report-nav > .nav-serach > .input-group {
+        width: 100%;
+        padding-right: 20px; }
+        #material-report > .material-report-nav > .nav-serach > .input-group > input {
+          width: 260px;
+          height: 30px; }
+        #material-report > .material-report-nav > .nav-serach > .input-group > .input-group-addon {
+          height: 30px;
+          padding: 0px 12px; }
+  #material-report > .material-report-main {
+    width: 100%;
+    height: 540px;
+    background: gray;
+    box-sizing: border-box; }
+
+/*# sourceMappingURL=material_report.css.map */
