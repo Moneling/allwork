@@ -39,23 +39,291 @@ $(function(){
 						"interpreter": "大刘",
 						"outTime": "2016-12-29 00:00:00",
 						"jpjclist": []
+						},
+						{
+						"visitName": "53434",
+						"visitManager": "爾特",
+						"sumName": "10",
+						"sumup": "10",
+						"batchId": "UEC201612141335152",
+						"interpreter": "吻額頭",
+						"outTime": "2016-12-29 00:00:00",
+						"jpjclist": []
+						},
+						{
+						"visitName": "你爹那個",
+						"visitManager": "rete",
+						"sumName": "10",
+						"sumup": "10",
+						"batchId": "UEC201612141347103",
+						"interpreter": "大多數",
+						"outTime": "2016-12-14 00:00:00",
+						"jpjclist": []
+						},
+						{
+						"visitName": "niemn",
+						"visitManager": "但是如果",
+						"sumName": "10",
+						"sumup": "10",
+						"batchId": "UEC201612141847194",
+						"interpreter": "大刘",
+						"outTime": "2016-12-29 00:00:00",
+						"jpjclist": []
+						},
+						{
+						"visitName": "53434",
+						"visitManager": "爾特",
+						"sumName": "10",
+						"sumup": "10",
+						"batchId": "UEC201612141335152",
+						"interpreter": "吻額頭",
+						"outTime": "2016-12-29 00:00:00",
+						"jpjclist": []
+						},
+						{
+						"visitName": "你爹那個",
+						"visitManager": "rete",
+						"sumName": "10",
+						"sumup": "10",
+						"batchId": "UEC201612141347103",
+						"interpreter": "大多數",
+						"outTime": "2016-12-14 00:00:00",
+						"jpjclist": []
+						},
+						{
+						"visitName": "niemn",
+						"visitManager": "但是如果",
+						"sumName": "10",
+						"sumup": "10",
+						"batchId": "UEC201612141847194",
+						"interpreter": "大刘",
+						"outTime": "2016-12-29 00:00:00",
+						"jpjclist": []
+						},
+						{
+						"visitName": "53434",
+						"visitManager": "爾特",
+						"sumName": "10",
+						"sumup": "10",
+						"batchId": "UEC201612141335152",
+						"interpreter": "吻額頭",
+						"outTime": "2016-12-29 00:00:00",
+						"jpjclist": []
+						},
+						{
+						"visitName": "你爹那個",
+						"visitManager": "rete",
+						"sumName": "10",
+						"sumup": "10",
+						"batchId": "UEC201612141347103",
+						"interpreter": "大多數",
+						"outTime": "2016-12-14 00:00:00",
+						"jpjclist": []
+						},
+						{
+						"visitName": "niemn",
+						"visitManager": "但是如果",
+						"sumName": "10",
+						"sumup": "10",
+						"batchId": "UEC201612141847194",
+						"interpreter": "大刘",
+						"outTime": "2016-12-29 00:00:00",
+						"jpjclist": []
+						},
+						{
+						"visitName": "53434",
+						"visitManager": "爾特",
+						"sumName": "10",
+						"sumup": "10",
+						"batchId": "UEC201612141335152",
+						"interpreter": "吻額頭",
+						"outTime": "2016-12-29 00:00:00",
+						"jpjclist": []
+						},
+						{
+						"visitName": "你爹那個",
+						"visitManager": "rete",
+						"sumName": "10",
+						"sumup": "10",
+						"batchId": "UEC201612141347103",
+						"interpreter": "大多數",
+						"outTime": "2016-12-14 00:00:00",
+						"jpjclist": []
+						},
+						{
+						"visitName": "niemn",
+						"visitManager": "但是如果",
+						"sumName": "10",
+						"sumup": "10",
+						"batchId": "UEC201612141847194",
+						"interpreter": "大刘",
+						"outTime": "2016-12-29 00:00:00",
+						"jpjclist": []
+						},
+						{
+						"visitName": "53434",
+						"visitManager": "爾特",
+						"sumName": "10",
+						"sumup": "10",
+						"batchId": "UEC201612141335152",
+						"interpreter": "吻額頭",
+						"outTime": "2016-12-29 00:00:00",
+						"jpjclist": []
+						},
+						{
+						"visitName": "你爹那個",
+						"visitManager": "rete",
+						"sumName": "10",
+						"sumup": "10",
+						"batchId": "UEC201612141347103",
+						"interpreter": "大多數",
+						"outTime": "2016-12-14 00:00:00",
+						"jpjclist": []
+						},
+						{
+						"visitName": "niemn",
+						"visitManager": "但是如果",
+						"sumName": "10",
+						"sumup": "10",
+						"batchId": "UEC201612141847194",
+						"interpreter": "大刘",
+						"outTime": "2016-12-29 00:00:00",
+						"jpjclist": []
+						},
+						{
+						"visitName": "53434",
+						"visitManager": "爾特",
+						"sumName": "10",
+						"sumup": "10",
+						"batchId": "UEC201612141335152",
+						"interpreter": "吻額頭",
+						"outTime": "2016-12-29 00:00:00",
+						"jpjclist": []
+						},
+						{
+						"visitName": "你爹那個",
+						"visitManager": "rete",
+						"sumName": "10",
+						"sumup": "10",
+						"batchId": "UEC201612141347103",
+						"interpreter": "大多數",
+						"outTime": "2016-12-14 00:00:00",
+						"jpjclist": []
+						},
+						{
+						"visitName": "niemn",
+						"visitManager": "但是如果",
+						"sumName": "10",
+						"sumup": "10",
+						"batchId": "UEC201612141847194",
+						"interpreter": "大刘",
+						"outTime": "2016-12-29 00:00:00",
+						"jpjclist": []
+						},
+						{
+						"visitName": "53434",
+						"visitManager": "爾特",
+						"sumName": "10",
+						"sumup": "10",
+						"batchId": "UEC201612141335152",
+						"interpreter": "吻額頭",
+						"outTime": "2016-12-29 00:00:00",
+						"jpjclist": []
+						},
+						{
+						"visitName": "你爹那個",
+						"visitManager": "rete",
+						"sumName": "10",
+						"sumup": "10",
+						"batchId": "UEC201612141347103",
+						"interpreter": "大多數",
+						"outTime": "2016-12-14 00:00:00",
+						"jpjclist": []
+						},
+						{
+						"visitName": "niemn",
+						"visitManager": "但是如果",
+						"sumName": "10",
+						"sumup": "10",
+						"batchId": "UEC201612141847194",
+						"interpreter": "大刘",
+						"outTime": "2016-12-29 00:00:00",
+						"jpjclist": []
+						},
+						{
+						"visitName": "53434",
+						"visitManager": "爾特",
+						"sumName": "10",
+						"sumup": "10",
+						"batchId": "UEC201612141335152",
+						"interpreter": "吻額頭",
+						"outTime": "2016-12-29 00:00:00",
+						"jpjclist": []
+						},
+						{
+						"visitName": "你爹那個",
+						"visitManager": "rete",
+						"sumName": "10",
+						"sumup": "10",
+						"batchId": "UEC201612141347103",
+						"interpreter": "大多數",
+						"outTime": "2016-12-14 00:00:00",
+						"jpjclist": []
+						},
+						{
+						"visitName": "niemn",
+						"visitManager": "但是如果",
+						"sumName": "10",
+						"sumup": "10",
+						"batchId": "UEC201612141847194",
+						"interpreter": "大刘",
+						"outTime": "2016-12-29 00:00:00",
+						"jpjclist": []
+						},
+						{
+						"visitName": "53434",
+						"visitManager": "爾特",
+						"sumName": "10",
+						"sumup": "10",
+						"batchId": "UEC201612141335152",
+						"interpreter": "吻額頭",
+						"outTime": "2016-12-29 00:00:00",
+						"jpjclist": []
+						},
+						{
+						"visitName": "你爹那個",
+						"visitManager": "rete",
+						"sumName": "10",
+						"sumup": "10",
+						"batchId": "UEC201612141347103",
+						"interpreter": "大多數",
+						"outTime": "2016-12-14 00:00:00",
+						"jpjclist": []
+						},
+						{
+						"visitName": "niemn",
+						"visitManager": "但是如果",
+						"sumName": "10",
+						"sumup": "10",
+						"batchId": "UEC201612141847194",
+						"interpreter": "大刘",
+						"outTime": "2016-12-29 00:00:00",
+						"jpjclist": []
 						}
 					]
 
 	var showphotoStr ="";
-		for(var i=0;i<photos.length;i++){
-				showphotoStr +=`<div class="col-xs-6 col-md-4 col-lg-3  album" data-id="1001">
-							 									<a href="#" class="thumbnail">
-							 										<img src="../images/404.jpg" alt="图片加载失败" >
-							 										<p class="del_photo" data-child-id="1001-001">
-							 											<span> × </span>
-							 										</p>
-							 										
-							 									</a>
-							 									<h3>图片名称:${photos[i].fileName}</h3>
-							 							</div>`;
+	for(var i=0;i<photos.length;i++){
+				showphotoStr +='<div class="col-xs-4 col-md-3 col-lg-3  album" data-id="1001">'+
+									'<a href="#" class="thumbnail" data-id='+photos[i].batchId+'>'
+										+'<img src="../images/404.jpg" alt="图片加载失败">'
+										+'<p class="del_photo" data-child-id="1001-001">'
+							 											+'<span> × </span></p>'
+									+'</a>'
+									+'<h4>图片名称:'+photos[i].visitName+'</h4>'
+								+'</div>';
 								}
-		
+	
 
 $(".photo_detail").html(showphotoStr);
 
@@ -76,11 +344,7 @@ $(".photo_detail").html(showphotoStr);
 					console.log("请求失败....");
 				}
 			})
-
 		})*/
-
-	
-
 	/*控制显示删除按钮*/
 	$(".thumbnail").hover(
 			function(){
@@ -106,20 +370,41 @@ $(".photo_detail").html(showphotoStr);
 
 		var scrollHeight =parseInt($(".container").offset().top) ;
 		var scrollBottomHeight = $(".container").height();
-				console.log("scrollBottomHeight:"+scrollBottomHeight);
+				//console.log("scrollBottomHeight:"+scrollBottomHeight);
 		var nowHeight =scrollBottomHeight+scrollHeight;
 				console.log(nowHeight+"<<<<<<<<<<<<<<<<<");
+				var newArr =[
+		{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
+		{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
+		{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
+		{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
+		{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
+		{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
+		{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
+		{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
+		{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
+		{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
+		{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
+		{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
+		{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
+		{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
+		{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
+		{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
+		{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
+		{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
+		{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
+		{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
+		{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
+		{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
+		{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
+		{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]}
+		]
 		if(nowHeight<900){
-				photos.push({fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
-	{fileID:1001,fileName:"图片1",fileChilds:[{childID:001-001,childName:"图片001"}]},
-	{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
-	{fileID:1001,fileName:"图片1",fileChilds:[{childID:001-001,childName:"图片001"}]},
-	{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
-	{fileID:1001,fileName:"图片1",fileChilds:[{childID:001-001,childName:"图片001"}]},
-	{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]},
-	{fileID:1001,fileName:"图片1",fileChilds:[{childID:001-001,childName:"图片001"}]},
-	{fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]})
-  			alert("ffff")
+					console.log(photos.length+":::::::::::::::::::::::::");
+		
+		// photos.push({fileID:1002,fileName:"图片11",fileChilds:[{childID:001-001,childName:"图片001"}]})
+		photos.concat(newArr)
+			console.log(photos.length+"+++++++++++++++++++++++++++++++++");
   		};
 	});
 

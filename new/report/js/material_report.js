@@ -23,7 +23,7 @@
       xAxis : [
       {
       	type : 'category',
-      	data : ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+      	data : ['东城区', '海淀区', '昌平区', '大兴区', '朝阳区', '丰台区', '房山区'],
       	axisTick: {
       		alignWithLabel: true
       	}
@@ -36,10 +36,10 @@
       ],
       series : [
       {
-      	name:'直接访问',
+      	name:'上传数量',
       	type:'bar',
       	barWidth: '60%',
-      	data:[10, 52, 200, 334, 390, 330, 220]
+      	data:[10, 52, 200, 334, 1390, 330, 220]
       }
       ]
    };

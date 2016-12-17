@@ -2,7 +2,7 @@ $(function(){
 	var files =
 	[
 		{
-		"visitName": "321321",
+		"visitName": "文件夹一",
 		"visitManager": "",
 		"sumName": "10",
 		"sumup": "10",
@@ -12,7 +12,7 @@ $(function(){
 		"jpjclist": []
 		},
 		{
-		"visitName": "53434",
+		"visitName": "文件夹二",
 		"visitManager": "爾特",
 		"sumName": "10",
 		"sumup": "10",
@@ -22,7 +22,7 @@ $(function(){
 		"jpjclist": []
 		},
 		{
-		"visitName": "你爹那個",
+		"visitName": "文件夹三",
 		"visitManager": "rete",
 		"sumName": "10",
 		"sumup": "10",
@@ -32,7 +32,7 @@ $(function(){
 		"jpjclist": []
 		},
 		{
-		"visitName": "niemn",
+		"visitName": "文件夹四",
 		"visitManager": "但是如果",
 		"sumName": "10",
 		"sumup": "10",
@@ -47,11 +47,13 @@ $(function(){
 	var showStr ="";
 
 		for(var i=0;i<files.length;i++){
-				showStr +='<div class="col-xs-4 col-md-3 col-lg-3  album">'
-									+'<a href="#" class="thumbnail" data-id='+files[i].batchId+'>'
-										+'<img src="../images/wjj.jpg" alt="图片加载失败">'
+				showStr +='<div class="col-xs-4 col-md-3 col-lg-3  album">'+
+									'<a href="#" class="thumbnail" data-id='+files[i].batchId+'>'
+										+'<img src="../images/404.jpg" alt="图片加载失败">'
 										+'<div class="showFileExplain photo_common">'
-											+'<p>说明文字...</p></div></a>'
+																		+'<p>'+"说明文字..."+'</p>'
+																	+'</div>'
+									+'</a>'
 									+'<h4>相册:'+files[i].visitName+'</h4>'
 								+'</div>';
 								}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>素材上传区域分布报表</title>
+	
+	<link rel="stylesheet" type="text/css" href="../common/css/system/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/material_report.css">
+
+	<!-- 日历字体图标 -->
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<!-- 日历样式 -->
+	
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui-1.10.3.full.min.css">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" />
+	<link rel="stylesheet" type="text/css" href="css/ace.min.css">
+	<script src="js/echarts.js"></script>
+</head>
+<body>
+	<div id="material-report">
+		<div class="material-report-nav">
+			 <!-- 这里是站点地图 -->
+			<div class="nav-site">
+				<ol class="breadcrumb">
+					<li><a href="#">大数据分析</a></li>
+					<li class="active"><a href="#">素材规格分析表</a></li>	
+				</ol>
+			</div>
+		<!-- 	这里是搜索选取 -->
+			<div class="nav-serach">					
+					<!-- <div class="btn-group">
+						<button type="button" class="btn btn-default dropdown-toggle" 
+								data-toggle="dropdown">
+							默认 <span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#">功能</a></li>
+							<li><a href="#">另一个功能</a></li>
+							<li><a href="#">其他</a></li>
+							<li class="divider"></li>
+							<li><a href="#">分离的链接</a></li>
+						</ul>
+					</div> -->
+					<!--  <div class="input-group">
+														    <input type="text" class="form-control input-md" placeholder="输入搜索条件">
+														    <span class=" btn btn-primary">搜索</span>
+					</div> -->
+
+					<div class="input-group ">
+						<input type="text" id="datepicker" class="form-control" style="width:130px" placeholder="输入起始时间" />
+						<span class="btn btn-primary">
+							<i class="icon-calendar"></i>
+						</span>
+						
+						<input type="text" id="datepicker1" class="form-control" style="width:130px;margin-left:20px;" placeholder="输入终止时间"/>
+						<span class="btn btn-primary">
+							<i class="icon-calendar"></i>
+						</span> 
+						<span class=" btn btn-primary">点击查询</span>
+					</div>
+				</div>
+		</div>
+		<div class="material-report-main" id="show-report">
+				
+		</div>
+
+	</div>
+	<script src="js/bootstrap.min.js"></script> 
+	<script src="js/jquery-2.0.3.min.js"></script>
+	<!-- 日历控件必须 -->
+	<script src="js/datajs/jquery-ui-1.10.3.full.min.js"></script>
+	<script src="js/datajs/typeahead-bs2.min.js"></script>
+	<script src="js/content_check_report.js"></script> 
+
+	<script type="text/javascript">
+			jQuery(function($) {
+				$( "#datepicker" ).datepicker({
+					showOtherMonths: true,
+					selectOtherMonths: false,
+				});
+
+				$( "#datepicker1" ).datepicker({
+					showOtherMonths: true,
+					selectOtherMonths: false,
+				});
+			})
+		</script>
+</body>
+</html>
